@@ -1166,35 +1166,35 @@ export default function ConsciousKarmaSections() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-gray-50 font-arsenal overflow-x-hidden p-12">
+    <div className="min-h-screen bg-black text-gray-50 font-arsenal overflow-x-hidden px-4 sm:px-6 md:px-8 lg:px-12 py-4 sm:py-6 md:py-8 lg:py-12">
       {/* HERO */}
-      <section className="relative min-h-screen bg-black flex flex-col pt-4 lg:pt-18">
-        <div className="container mx-auto px-6 flex-1 flex flex-col justify-center">
+      <section className="relative min-h-screen bg-black flex flex-col pt-12 sm:pt-16 md:pt-4 lg:pt-18">
+        <div className="container mx-auto px-4 sm:px-6 flex-1 flex flex-col justify-center">
           {/* 🔹 Header (Brand + Hamburger) */}
-          <div className="absolute top-0 left-0 right-0 flex items-center justify-between py-3 z-20 px-6 lg:px-8">
-            <div className="leading-[1] flex flex-col items-center">
-              <span className="block text-[clamp(25px,2.6vw,28px)] text-white">
+          <div className="absolute top-0 left-0 right-0 flex items-center justify-between py-3 sm:py-4 z-20 px-4 sm:px-6 lg:px-8">
+            <div className="leading-[1] flex flex-col items-start sm:items-center">
+              <span className="block text-[20px] sm:text-[24px] md:text-[26px] lg:text-[28px] text-white">
                 conscious
               </span>
-              <span className="block text-[clamp(24px,2.4vw,32px)] tracking-[2px] mt-[-8px] text-orange-400 font-balgin">
+              <span className="block text-[22px] sm:text-[26px] md:text-[30px] lg:text-[32px] tracking-[1px] sm:tracking-[2px] mt-[-4px] sm:mt-[-8px] text-orange-400 font-balgin">
                 KARMA
               </span>
             </div>
 
             {/* 🔹 Hamburger Icon */}
             <button
-              className="flex flex-col justify-between w-[46px] h-[42px] p-[8px] rounded-[12px] bg-transparent cursor-pointer transition-all duration-300"
+              className="flex flex-col justify-between w-[40px] h-[36px] sm:w-[46px] sm:h-[42px] p-[6px] sm:p-[8px] rounded-[12px] bg-transparent cursor-pointer transition-all duration-300"
               onClick={() => setMenuOpen((v) => !v)}
             >
               {[0, 1, 2].map((i) => (
                 <span
                   key={i}
-                  className={`block w-[45px] h-[3px] bg-white rounded-[2px] transition-all duration-300 ${menuOpen
+                  className={`block w-[28px] sm:w-[45px] h-[2.5px] sm:h-[3px] bg-white rounded-[2px] transition-all duration-300 ${menuOpen
                       ? i === 0
-                        ? "rotate-45 translate-y-[10px]"
+                        ? "rotate-45 translate-y-[8px] sm:translate-y-[10px]"
                         : i === 1
                           ? "opacity-0"
-                          : "-rotate-45 -translate-y-[10px]"
+                          : "-rotate-45 -translate-y-[8px] sm:-translate-y-[10px]"
                       : ""
                     }`}
                 />
@@ -1203,19 +1203,19 @@ export default function ConsciousKarmaSections() {
           </div>
 
           {/* 🔹 Main Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] items-center gap-6 flex-1 justify-end">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] items-center gap-8 sm:gap-10 lg:gap-6 flex-1 justify-end mt-16 sm:mt-0">
             {/* LEFT — Hero Heading */}
-            <div className="flex flex-col justify-end h-full">
-              <div className="h-2/3 flex flex-col items-start justify-center lg:justify-end">
-                <h1 className="font-balgin mb-[90px] font-extralight uppercase text-[clamp(26px,4vw,54px)] leading-[1.02] tracking-[0.02em] text-left">
-                  <span className="block mb-2">YOUR MOBILE NUMBER</span>
-                  <span className="block mb-2 text-center">
+            <div className="flex flex-col justify-center lg:justify-end h-full">
+              <div className="flex flex-col items-center sm:items-start justify-center lg:justify-end">
+                <h1 className="font-balgin mb-8 sm:mb-12 md:mb-16 lg:mb-[90px] font-extralight uppercase text-[24px] sm:text-[32px] md:text-[42px] lg:text-[54px] leading-[1.1] sm:leading-[1.02] tracking-[0.02em] text-center sm:text-left w-full">
+                  <span className="block mb-1 sm:mb-2">YOUR MOBILE NUMBER</span>
+                  <span className="block mb-1 sm:mb-2 text-center">
                     IS THE <span className="text-orange-400">KEY</span>
                   </span>
-                  <span className="block mb-2">
+                  <span className="block mb-1 sm:mb-2 text-center sm:text-left">
                     <span className="text-orange-400">TO</span> ACHIEVING YOUR
                   </span>
-                  <span className="block text-center mb-2">
+                  <span className="block text-center mb-1 sm:mb-2">
                     <span className="text-orange-400">DREAMS</span>
                   </span>
                 </h1>
@@ -1223,20 +1223,20 @@ export default function ConsciousKarmaSections() {
             </div>
 
             {/* RIGHT — Info + Form */}
-            <div className="flex flex-col  items-center justify-start text-center gap-6 pt-[2px]">
+            <div className="flex flex-col items-center justify-start text-center gap-4 sm:gap-6 pt-[2px]">
               {/* Heading */}
               <div className="">
-                <h2 className="font-thin text-gray-200 text-[clamp(26px,2vw,26px)] leading-tight">
+                <h2 className="font-thin text-gray-200 text-[18px] sm:text-[22px] md:text-[24px] lg:text-[26px] leading-tight">
                   Mobile Number Influence
                 </h2>
-                <p className=" font-thin text-gray-200 text-[clamp(26px,2vw,26px)] mt-[-6px]">
+                <p className="font-thin text-gray-200 text-[18px] sm:text-[22px] md:text-[24px] lg:text-[26px] mt-[-4px] sm:mt-[-6px]">
                   Key Areas of Life
                 </p>
               </div>
 
               {/* Icon + Label Grid */}
-              <div className="flex justify-center items-center mt-[-20px]">
-                <div className="grid grid-cols-[auto,1fr] items-center gap-x-14 gap-y-1 text-[clamp(18px,1.6vw,20px)] w-[260px]  ">
+              <div className="flex justify-center items-center mt-[-10px] sm:mt-[-20px]">
+                <div className="grid grid-cols-[auto,1fr] items-center gap-x-6 sm:gap-x-10 md:gap-x-14 gap-y-1 text-[16px] sm:text-[18px] md:text-[20px] w-[220px] sm:w-[240px] md:w-[260px]">
                   {[
                     [financeImg, "Finance & Work"],
                     [fortuneImg, "Fortune"],
@@ -1245,21 +1245,21 @@ export default function ConsciousKarmaSections() {
                     [intelligenceImg, "Intelligence"],
                   ].map(([src, label], i) => (
                     <React.Fragment key={i}>
-                      <div className="flex justify-end  h-full w-full border-blue-300">
+                      <div className="flex justify-end h-full w-full">
                         <img
                           src={src}
                           alt={label}
-                          className="w-9 h-9 lg:w-16 lg:h-16   object-contain"
+                          className="w-8 h-8 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 object-contain"
                         />
                       </div>
-                      <div className="text-left text-[22px]">{label}</div>
+                      <div className="text-left text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px]">{label}</div>
                     </React.Fragment>
                   ))}
                 </div>
               </div>
 
-              {/* Price + Inputs (✅ fixed positioning + alignment) */}
-              <div className=" w-full max-w-[300px] flex flex-col items-center">
+              {/* Price + Inputs */}
+              <div className="w-full max-w-[280px] sm:max-w-[300px] flex flex-col items-center">
                 {/* <div className="flex items-center justify-center gap-2 mb-[8px]">
             <span className="text-white text-lg font-medium">$ 269</span>
             <div className="w-20 h-8 border-2 border-orange-400 rounded-md"></div>
@@ -1312,23 +1312,23 @@ export default function ConsciousKarmaSections() {
 
 
       {/* WHAT IS THIS */}
-      <section className="relative min-h-screen bg-black flex items-start justify-center pt-[36px] pb-[36px] lg:pt-[44px] lg:pb-[64px]">
-        <div className="container mx-auto px-6 max-w-full text-center">
-          <h2 className="font-balgin text-[clamp(10px,4vw,25px)] leading-[1.05] mb-[12px] font-bold tracking-[0.02em] text-white">
+      <section className="relative min-h-screen bg-black flex items-start justify-center pt-8 sm:pt-10 md:pt-12 lg:pt-[44px] pb-8 sm:pb-10 md:pb-12 lg:pb-[64px] px-4 sm:px-6">
+        <div className="container mx-auto max-w-full text-center">
+          <h2 className="font-balgin text-[20px] sm:text-[22px] md:text-[24px] lg:text-[25px] leading-[1.05] mb-3 sm:mb-4 font-bold tracking-[0.02em] text-white">
             What is this
           </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-[44px] items-center justify-items-center mt-[100px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12 lg:gap-[44px] items-start justify-items-center mt-12 sm:mt-16 md:mt-20 lg:mt-[100px]">
             {/* Earth section */}
-            <div className="flex flex-col items-center text-center gap-[22px] w-[320px]">
-              <div className="w-[clamp(200px,16vw,220px)] h-[clamp(200px,16vw,220px)] rounded-full grid place-items-center bg-transparent overflow-hidden ">
+            <div className="flex flex-col items-center text-center gap-4 sm:gap-5 md:gap-6 lg:gap-[22px] w-full max-w-[320px]">
+              <div className="w-[160px] h-[160px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] lg:w-[220px] lg:h-[220px] rounded-full grid place-items-center bg-transparent overflow-hidden">
                 <img
                   src={earthGif}
                   alt="Earth rotating"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <p className="m-0 leading-[1.7] text-[18px] text-gray-200 font-thin w-[320px] ">
+              <p className="m-0 leading-[1.7] text-[16px] sm:text-[17px] md:text-[18px] text-gray-200 font-thin w-full px-4 sm:px-0">
                 The universe is alive with energy. These cosmic forces move
                 through us, subtly shaping thoughts, guiding actions, and
                 coloring experiences
@@ -1336,31 +1336,30 @@ export default function ConsciousKarmaSections() {
             </div>
 
             {/* Zero section */}
-            <div className="flex flex-col items-center text-center gap-[22px] mw-[320px]">
-              <div className="w-[clamp(200px,16vw,220px)] h-[clamp(200px,16vw,220px)] rounded-full grid place-items-center bg-transparent overflow-hidden">
+            <div className="flex flex-col items-center text-center gap-4 sm:gap-5 md:gap-6 lg:gap-[22px] w-full max-w-[320px]">
+              <div className="w-[160px] h-[160px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] lg:w-[220px] lg:h-[220px] rounded-full grid place-items-center bg-transparent overflow-hidden">
                 <img
                   src={zeroPng}
                   alt="Zero symbol"
                   className="w-full h-full object-cover scale-[1.02]"
                 />
               </div>
-              <p className="m-0 leading-[1.7] text-[18px] text-[#eaeaea] max-w-[320px]">
-                Sages used numbers as symbols for <br /> celestial influence, capturing the <br /> essence of cosmic energies with <br /> simplicity and precision
+              <p className="m-0 leading-[1.7] text-[16px] sm:text-[17px] md:text-[18px] text-[#eaeaea] w-full px-4 sm:px-0">
+                Sages used numbers as symbols for celestial influence, capturing the essence of cosmic energies with simplicity and precision
               </p>
             </div>
 
             {/* Karma section */}
-            <div className="flex flex-col items-center text-center gap-[22px] w-[320px] ">
-              <div className="w-[clamp(200px,16vw,220px)] h-[clamp(200px,16vw,220px)] rounded-full grid place-items-center bg-transparent overflow-hidden  ">
+            <div className="flex flex-col items-center text-center gap-4 sm:gap-5 md:gap-6 lg:gap-[22px] w-full max-w-[320px] md:col-span-2 lg:col-span-1">
+              <div className="w-[160px] h-[160px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] lg:w-[220px] lg:h-[220px] rounded-full grid place-items-center bg-transparent overflow-hidden">
                 <img
                   src={karmaTransparent}
                   alt="Karma symbol"
                   className="w-full h-full object-contain scale-[1.5]"
                 />
               </div>
-              <p className="m-0 leading-relaxed text-[18px] text-thin w-[320px]">
-                Our choices and the energies we <br />
-                embrace shape destiny, creating the <br /> path we walk and the reality we <br /> manifest
+              <p className="m-0 leading-relaxed text-[16px] sm:text-[17px] md:text-[18px] text-thin w-full px-4 sm:px-0">
+                Our choices and the energies we embrace shape destiny, creating the path we walk and the reality we manifest
               </p>
             </div>
           </div>
@@ -1371,29 +1370,24 @@ export default function ConsciousKarmaSections() {
       </section>
 
       {/* UNIQUE SEQUENCE */}
-      <section className="relative min-h-screen bg-black flex flex-col items-center justify-center py-[72px]">
-        <div className="container mx-auto px-6 text-center">
+      <section className="relative min-h-screen bg-black flex flex-col items-center justify-center py-12 sm:py-16 md:py-20 lg:py-[72px] px-4 sm:px-6">
+        <div className="container mx-auto text-center">
           {/* Top Text */}
-          <p className="text-[#eaeaea] font-arsenal text-[clamp(14px,2vw,20px)] leading-[1.6] mb-[40px] max-w-[600px] mx-auto">
-            Every mobile number is a unique sequence, each
-            <br />
-            carrying distinct energy
+          <p className="text-[#eaeaea] font-arsenal text-[16px] sm:text-[18px] md:text-[19px] lg:text-[20px] leading-[1.6] mb-6 sm:mb-8 md:mb-10 lg:mb-[40px] max-w-[90%] sm:max-w-[600px] mx-auto">
+            Every mobile number is a unique sequence, each carrying distinct energy
           </p>
 
           {/* Middle Text */}
-          <p className="text-gray-200 font-arsenal text-[clamp(14px,2vw,20px)] leading-[1.6] mb-[60px] max-w-[600px] mx-auto">
-            The interaction and position of its digits form a<br />
-            pattern of vibrations, shaping actions, behaviour, and
-            <br />
-            the flow of life
+          <p className="text-gray-200 font-arsenal text-[16px] sm:text-[18px] md:text-[19px] lg:text-[20px] leading-[1.6] mb-8 sm:mb-10 md:mb-12 lg:mb-[60px] max-w-[90%] sm:max-w-[600px] mx-auto">
+            The interaction and position of its digits form a pattern of vibrations, shaping actions, behaviour, and the flow of life
           </p>
 
           {/* Image */}
-          <div className="w-full flex justify-center mt-[30px]">
+          <div className="w-full flex justify-center mt-6 sm:mt-8 md:mt-10 lg:mt-[30px]">
             <img
               src={mobileEnergyFlow}
               alt="Mobile energy flow diagram"
-              className="w-[min(780px,30vw)] mx-auto rounded-[14px] object-contain"
+              className="w-[280px] sm:w-[400px] md:w-[500px] lg:w-[600px] xl:w-[780px] max-w-[90vw] mx-auto rounded-[14px] object-contain"
             />
           </div>
         </div>
@@ -1403,29 +1397,27 @@ export default function ConsciousKarmaSections() {
       </section>
 
       {/* DISTINCTLY YOURS */}
-      <section className="relative min-h-screen bg-black flex flex-col items-center justify-center text-center py-[72px]">
-        <div className="container mx-auto px-6">
+      <section className="relative min-h-screen bg-black flex flex-col items-center justify-center text-center py-12 sm:py-16 md:py-20 lg:py-[72px] px-4 sm:px-6">
+        <div className="container mx-auto">
           {/* Text block */}
-          <div className="space-y-[12px]">
-            <p className="text-gray-200 font-thin text-[clamp(30px,2.5vw,30px)] leading-[1.6]">
+          <div className="space-y-3 sm:space-y-4 md:space-y-[12px]">
+            <p className="text-gray-200 font-thin text-[24px] sm:text-[26px] md:text-[28px] lg:text-[30px] leading-[1.6]">
               Your DATE of BIRTH can be
               <span className="text-[#d87d3d]"> shared</span>.
             </p>
-            <p className=" mt-[-100px] text-gray-200 font-thin  text-[clamp(30px,2vw,20px)] leading-relaxed ">
+            <p className="text-gray-200 font-thin text-[18px] sm:text-[19px] md:text-[20px] leading-relaxed">
               Your NAME can be <span className="text-[#d87d3d]">repeated</span>.
             </p>
-            <p className="text-gray-200 font-thin text-[clamp(30px,2vw,20px)] leading-relaxed ">
-              Your MOBILE NUMBER
-              <br />
-              is <span className="text-[#d87d3d]">DISTINCTLY YOURS</span>.
+            <p className="text-gray-200 font-thin text-[18px] sm:text-[19px] md:text-[20px] leading-relaxed">
+              Your MOBILE NUMBER is <span className="text-[#d87d3d]">DISTINCTLY YOURS</span>.
             </p>
           </div>
 
           {/* Call to action */}
-          <div className="mt-[170px]">
+          <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-[170px]">
             <a
               href="/get-report"
-              className="text-[#d87d3d] text-[clamp(25px,1.5vw,30px)] font-thin hover:opacity-80 transition-opacity"
+              className="text-[#d87d3d] text-[20px] sm:text-[24px] md:text-[28px] lg:text-[30px] font-thin hover:opacity-80 transition-opacity"
             >
               Get personalised report &gt;&gt;&gt;
             </a>
@@ -1439,58 +1431,47 @@ export default function ConsciousKarmaSections() {
      
 
       {/* WOVEN */}
-      <section className="relative bg-black flex flex-col items-center justify-center py-16 px-6 text-center">
+      <section className="relative bg-black flex flex-col items-center justify-center py-12 sm:py-14 md:py-16 px-4 sm:px-6 text-center">
         {/* 🔹 Text */}
-        <p className="max-w-[560px] mx-auto text-gray-200 text-[clamp(25px,1.1vw,20px)] leading-relaxed font-thin">
-          Just as numbers are woven into the fabric of <br /> the universe, your mobile number is intricately <br /> woven into your life. It guides your journey,<br />
+        <p className="max-w-[90%] sm:max-w-[560px] mx-auto text-gray-200 text-[16px] sm:text-[18px] md:text-[19px] lg:text-[20px] leading-relaxed font-thin">
+          Just as numbers are woven into the fabric of the universe, your mobile number is intricately woven into your life. It guides your journey,
           <span className="text-orange-400 font-medium">
-            influencing your karma with every call,<br />message, and interaction.
+            {" "}influencing your karma with every call, message, and interaction.
           </span>
         </p>
-        
 
         {/* 🔹 Image */}
         <img
           src={earthConnections}
           alt="Earth connections"
-          className="mt-8 w-[min(340px,70vw)] md:w-[min(400px,50vw)] mx-auto"
+          className="mt-6 sm:mt-8 w-[260px] sm:w-[320px] md:w-[380px] lg:w-[400px] mx-auto"
         />
 
         {/* 🔹 Bottom gradient line */}
         <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#bbb] via-[#444] to-[#222] opacity-50" />
       </section>
- {/* YANTRA */}
-      <section className="relative min-h-screen bg-black flex flex-col items-center justify-center text-center py-[72px]">
-        <div className="container mx-auto px-6 max-w-[680px] ">
+      {/* YANTRA */}
+      <section className="relative min-h-screen bg-black flex flex-col items-center justify-center text-center py-12 sm:py-16 md:py-20 lg:py-[72px] px-4 sm:px-6">
+        <div className="container mx-auto max-w-[90%] sm:max-w-[680px]">
           {/* Text block */}
-          <p className="text-gray-200 text-[clamp(25px,1.1vw,40px)] leading-relaxed font-light mb-[40px]">
+          <p className="text-gray-200 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-relaxed font-light mb-6 sm:mb-8 md:mb-10 lg:mb-[40px]">
             A mobile number is a
-            <span className="text-[#d87d3d]"> DIGITAL AGE YANTRA</span><br />
+            <span className="text-[#d87d3d]"> DIGITAL AGE YANTRA</span>{" "}
             a tool threaded with different forms of energy.
           </p>
 
-
-          <p className="text-gray-200 text-[clamp(25px,1.1vw,40px)] leading-relaxed font-light mb-[32px]">
-            Consciously crafted,
-            <br />
-            it holds the power to ease a journey,
-            <br />
-            shape a path, and
-            <br />
-            open new opportunities.
+          <p className="text-gray-200 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-relaxed font-light mb-6 sm:mb-7 md:mb-8 lg:mb-[32px]">
+            Consciously crafted, it holds the power to ease a journey, shape a path, and open new opportunities.
           </p>
 
-          <p className="text-gray-200 text-[clamp(25px,1.1vw,40px)] leading-relaxed font-light mb-[48px]">
-            Your mobile number is not just utility.
-            <br />
-            it is your greatest asset -<br />
-            the code of your journey.
+          <p className="text-gray-200 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-relaxed font-light mb-8 sm:mb-10 md:mb-12 lg:mb-[48px]">
+            Your mobile number is not just utility. it is your greatest asset - the code of your journey.
           </p>
 
           {/* CTA */}
           <a
             href="/consult"
-            className="text-[#d87d3d] text-[clamp(25px,1.1vw,40px)] leading-relaxed font-lighthover:opacity-80 transition-opacity"
+            className="text-[#d87d3d] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-relaxed font-light hover:opacity-80 transition-opacity"
           >
             Invest in your greatest asset &gt;&gt;&gt;
           </a>
@@ -1500,23 +1481,23 @@ export default function ConsciousKarmaSections() {
         <div className="absolute bottom-0 left-0 right-0 h-[4px] bg-gradient-to-r from-[#bbb] via-[#444] to-[#222] opacity-50" />
       </section>
       {/* BLOGS */}
-      <section className="relative min-h-screen bg-black flex flex-col items-center justify-center py-[72px]">
-        <div className="container mx-auto px-6 text-center w-full">
+      <section id="blogs" className="relative min-h-screen bg-black flex flex-col items-center justify-center py-12 sm:py-16 md:py-20 lg:py-[72px] px-4 sm:px-6">
+        <div className="container mx-auto text-center w-full">
           {/* 🔹 Heading */}
-          <h2 className="font-balgin text-white text-[clamp(20px,2.4vw,28px)] mb-[40px]">
+          <h2 className="font-balgin text-white text-[22px] sm:text-[24px] md:text-[26px] lg:text-[28px] mb-8 sm:mb-10 md:mb-12 lg:mb-[40px]">
             Blogs
           </h2>
 
           {/* 🔹 Blog Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-[24px] justify-items-center max-w-[1200px] mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 md:gap-8 lg:gap-[24px] justify-items-center max-w-[1200px] mx-auto">
             {/* Blog 1 */}
             <div className="w-full max-w-[400px] border-2 border-orange-400 rounded-lg overflow-hidden bg-[rgba(255,255,255,0.03)] hover:bg-[rgba(255,255,255,0.06)] transition-all">
               <div className="aspect-square bg-gradient-to-br from-orange-400/20 to-orange-600/10 flex items-center justify-center">
-                <div className="text-6xl">📱</div>
+                <div className="text-5xl sm:text-6xl">📱</div>
               </div>
-              <div className="p-6 text-left">
-                <h3 className="text-xl font-semibold mb-3 text-white">Mobile Number Energy</h3>
-                <p className="text-gray-300 text-sm mb-4">
+              <div className="p-4 sm:p-5 md:p-6 text-left">
+                <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-white">Mobile Number Energy</h3>
+                <p className="text-gray-300 text-sm mb-3 sm:mb-4">
                   Discover how the energy of your mobile number influences your daily life, relationships, and career opportunities.
                 </p>
                 <a href="/blog/mobile-energy" className="text-orange-400 font-semibold text-sm hover:text-orange-300">
@@ -1528,11 +1509,11 @@ export default function ConsciousKarmaSections() {
             {/* Blog 2 */}
             <div className="w-full max-w-[400px] border-2 border-orange-400 rounded-lg overflow-hidden bg-[rgba(255,255,255,0.03)] hover:bg-[rgba(255,255,255,0.06)] transition-all">
               <div className="aspect-square bg-gradient-to-br from-orange-400/20 to-orange-600/10 flex items-center justify-center">
-                <div className="text-6xl">✨</div>
+                <div className="text-5xl sm:text-6xl">✨</div>
               </div>
-              <div className="p-6 text-left">
-                <h3 className="text-xl font-semibold mb-3 text-white">Numerology & Karma</h3>
-                <p className="text-gray-300 text-sm mb-4">
+              <div className="p-4 sm:p-5 md:p-6 text-left">
+                <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-white">Numerology & Karma</h3>
+                <p className="text-gray-300 text-sm mb-3 sm:mb-4">
                   Explore the ancient science of numerology and understand how numbers shape your karma and destiny.
                 </p>
                 <a href="/blog/numerology-karma" className="text-orange-400 font-semibold text-sm hover:text-orange-300">
@@ -1542,7 +1523,7 @@ export default function ConsciousKarmaSections() {
             </div>
 
             {/* Blog 3 */}
-            <div className="w-full max-w-[400px] border-2 border-orange-400 rounded-lg overflow-hidden bg-[rgba(255,255,255,0.03)] hover:bg-[rgba(255,255,255,0.06)] transition-all">
+            <div className="w-full max-w-[400px] border-2 border-orange-400 rounded-lg overflow-hidden bg-[rgba(255,255,255,0.03)] hover:bg-[rgba(255,255,255,0.06)] transition-all sm:col-span-2 lg:col-span-1">
               <div className="aspect-square bg-gradient-to-br from-orange-400/20 to-orange-600/10 flex items-center justify-center">
                 <div className="text-6xl">🔮</div>
               </div>
@@ -1572,16 +1553,15 @@ export default function ConsciousKarmaSections() {
 
 
       {/* FINAL CTA */}
-      <section className="relative min-h-screen bg-black flex flex-col items-center justify-center py-[45px]">
-        <div className="container mx-auto px-6 flex flex-col items-center text-center space-y-8">
+      <section className="relative min-h-screen bg-black flex flex-col items-center justify-center py-10 sm:py-12 md:py-[45px] px-4 sm:px-6">
+        <div className="container mx-auto flex flex-col items-center text-center space-y-6 sm:space-y-7 md:space-y-8">
           {/* 🔹 Heading */}
-          <p className="font-thin text-white text-[clamp(16px,1.8vw,30px)] leading-relaxed max-w-[620px] mx-auto">
-            Is Your Mobile Number Enhancing Your<br />
-            Journey or Holding You Back?
+          <p className="font-thin text-white text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] leading-relaxed max-w-[90%] sm:max-w-[620px] mx-auto">
+            Is Your Mobile Number Enhancing Your Journey or Holding You Back?
           </p>
 
           {/* 🔹 Icon Row */}
-          <div className="flex justify-center items-center gap-[32px] flex-wrap">
+          <div className="flex justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-[32px] flex-wrap">
             {[
               financeImg,
               fortuneImg,
@@ -1593,13 +1573,13 @@ export default function ConsciousKarmaSections() {
                 key={i}
                 src={src}
                 alt=""
-                className="w-[clamp(48px,5.5vw,85px)] h-[clamp(48px,5.5vw,64px)] object-contain"
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain"
               />
             ))}
           </div>
 
           {/* 🔹 Form Section */}
-          <div className="w-full max-w-[360px] mt-[8px] flex flex-col items-center">
+          <div className="w-full max-w-[360px] mt-2 sm:mt-[8px] flex flex-col items-center">
             <InlineInstantReportForm
               ctaLabel="Get Report"
               onSubmit={openPrefilledModal}
@@ -1607,36 +1587,36 @@ export default function ConsciousKarmaSections() {
           </div>
         </div>
 
-        {/* 🔹 Footer (Untouched, just spacing adjusted) */}
-        <footer className="absolute bottom-0 left-0 right-0 bg-orange-400 py-[18px]">
-          <div className="container mx-auto px-6 flex flex-col lg:flex-row gap-[14px] items-center justify-between">
-            <div className="flex flex-col lg:flex-row gap-[14px]">
+        {/* 🔹 Footer */}
+        <footer className="absolute bottom-0 left-0 right-0 bg-orange-400 py-4 sm:py-5 md:py-[18px]">
+          <div className="container mx-auto px-4 sm:px-6 flex flex-col lg:flex-row gap-3 sm:gap-4 md:gap-[14px] items-center justify-between">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-[14px] text-center sm:text-left">
               <a
                 href="/termsandconditions"
-                className="text-[#1d1209] underline font-bold"
+                className="text-[#1d1209] underline font-bold text-sm sm:text-base"
               >
                 Terms & Conditions
               </a>
               <a
                 href="/privacy-policy"
-                className="text-[#1d1209] underline font-bold"
+                className="text-[#1d1209] underline font-bold text-sm sm:text-base"
               >
                 Privacy Policy
               </a>
               <a
                 href="/refund-policy"
-                className="text-[#1d1209] underline font-bold"
+                className="text-[#1d1209] underline font-bold text-sm sm:text-base"
               >
                 Refund Policy
               </a>
               <a
                 href="/shipping-policy"
-                className="text-[#1d1209] underline font-bold"
+                className="text-[#1d1209] underline font-bold text-sm sm:text-base"
               >
                 Shipping & Delivery
               </a>
             </div>
-            <div className="text-[#1d1209] font-bold">
+            <div className="text-[#1d1209] font-bold text-sm sm:text-base text-center sm:text-right">
               Contact Us – suma@consciouskarma.co
             </div>
           </div>
@@ -1647,8 +1627,8 @@ export default function ConsciousKarmaSections() {
       {/* MODAL */}
       {showForm && (
         <div className="fixed inset-0 bg-[rgba(0,0,0,0.8)] backdrop-blur-[4px] z-50 flex items-center justify-center p-4">
-          <div className="bg-black border border-gray-600 rounded-[16px] p-8 max-w-md w-full max-h-[90vh] overflow-y-auto">
-            <h3 className="font-balgin text-2xl mb-4 text-orange-400">
+          <div className="bg-black border border-gray-600 rounded-[16px] p-6 sm:p-8 max-w-md w-full max-h-[90vh] overflow-y-auto">
+            <h3 className="font-balgin text-xl sm:text-2xl mb-4 text-orange-400">
               Enter Details
             </h3>
             <InstantReportForm
@@ -1664,7 +1644,7 @@ export default function ConsciousKarmaSections() {
             />
             <button
               onClick={() => setShowForm(false)}
-              className="mt-4 w-full py-2 border border-gray-500 rounded-md text-gray-50 hover:bg-gray-800"
+              className="mt-4 w-full py-2 border border-gray-500 rounded-md text-gray-50 hover:bg-gray-800 text-sm sm:text-base"
             >
               Cancel
             </button>
