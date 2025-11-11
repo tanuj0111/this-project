@@ -1689,14 +1689,16 @@ function InlineInstantReportForm({
       className="p-3 bg-black border-2 border-black rounded-[10px] flex flex-col gap-3 w-full"
       aria-label="Instant Report Form"
     >
-      <div className="flex gap-2 w-full">
+      <div className="flex gap-2 sm:gap-3 w-full">
         <select
           value={isd}
           onChange={(e) => setIsd(e.target.value)}
-          className="w-20 sm:w-[90px] p-2 rounded-md bg-black border border-gray-500 text-gray-50 text-sm sm:text-base appearance-none bg-no-repeat bg-right pr-8"
+          className="w-[85px] sm:w-[95px] p-2 sm:p-[10px] rounded-md bg-black border border-gray-500 text-gray-50 text-sm sm:text-base font-medium appearance-none bg-no-repeat pr-7 sm:pr-8 cursor-pointer hover:border-gray-400 transition-colors"
           style={{
             backgroundImage:
-              'url(\'data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"%3e%3cpath stroke="%236b7280" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6 8 4 4 4-4"/%3e%3c/svg%3e\')',
+              'url(\'data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"%3e%3cpath stroke="%239ca3af" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6 8 4 4 4-4"/%3e%3c/svg%3e\')',
+            backgroundPosition: 'right 0.4rem center',
+            backgroundSize: '1.2em',
           }}
           aria-label="Country code"
         >
@@ -1707,11 +1709,11 @@ function InlineInstantReportForm({
           <option value="+971">🇦🇪 +971</option>
         </select>
         <input
-          className="flex-1 p-2 rounded-md bg-black border border-gray-500 text-gray-50 text-sm sm:text-base"
+          className="flex-1 p-2 sm:p-[10px] rounded-md bg-black border border-gray-500 text-gray-50 text-sm sm:text-base placeholder:text-gray-500 hover:border-gray-400 focus:border-orange-400 focus:outline-none transition-colors"
           type="tel"
           inputMode="numeric"
           pattern="[0-9 ]*"
-          placeholder="Mobile number"
+          placeholder="Enter mobile number"
           value={mobile}
           onChange={(e) => setMobile(e.target.value)}
           aria-label="Mobile number"
