@@ -1553,8 +1553,8 @@ export default function ConsciousKarmaSections() {
 
 
       {/* FINAL CTA */}
-      <section className="relative min-h-screen bg-black flex flex-col items-center justify-center py-10 sm:py-12 md:py-[45px] px-4 sm:px-6">
-        <div className="container mx-auto flex flex-col items-center text-center space-y-6 sm:space-y-7 md:space-y-8">
+      <section className="relative min-h-screen bg-black flex flex-col items-center justify-center py-10 sm:py-12 md:py-[45px] px-4 sm:px-6 pb-24 sm:pb-28 md:pb-32">
+        <div className="container mx-auto flex flex-col items-center text-center space-y-6 sm:space-y-7 md:space-y-8 mb-8 sm:mb-12">
           {/* 🔹 Heading */}
           <p className="font-thin text-white text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] leading-relaxed max-w-[90%] sm:max-w-[620px] mx-auto">
             Is Your Mobile Number Enhancing Your Journey or Holding You Back?
@@ -1588,35 +1588,35 @@ export default function ConsciousKarmaSections() {
         </div>
 
         {/* 🔹 Footer */}
-        <footer className="absolute bottom-0 left-0 right-0 bg-orange-400 py-4 sm:py-5 md:py-[18px]">
-          <div className="container mx-auto px-4 sm:px-6 flex flex-col lg:flex-row gap-3 sm:gap-4 md:gap-[14px] items-center justify-between">
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-[14px] text-center sm:text-left">
+        <footer className="absolute bottom-0 left-0 right-0 bg-orange-400 py-3 sm:py-4 md:py-5">
+          <div className="container mx-auto px-4 sm:px-6 flex flex-col lg:flex-row gap-2 sm:gap-3 md:gap-4 items-center justify-between text-center lg:text-left">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center lg:justify-start">
               <a
                 href="/termsandconditions"
-                className="text-[#1d1209] underline font-bold text-sm sm:text-base"
+                className="text-[#1d1209] underline font-bold text-xs sm:text-sm hover:text-[#3d2d19] transition-colors"
               >
                 Terms & Conditions
               </a>
               <a
                 href="/privacy-policy"
-                className="text-[#1d1209] underline font-bold text-sm sm:text-base"
+                className="text-[#1d1209] underline font-bold text-xs sm:text-sm hover:text-[#3d2d19] transition-colors"
               >
                 Privacy Policy
               </a>
               <a
                 href="/refund-policy"
-                className="text-[#1d1209] underline font-bold text-sm sm:text-base"
+                className="text-[#1d1209] underline font-bold text-xs sm:text-sm hover:text-[#3d2d19] transition-colors"
               >
                 Refund Policy
               </a>
               <a
                 href="/shipping-policy"
-                className="text-[#1d1209] underline font-bold text-sm sm:text-base"
+                className="text-[#1d1209] underline font-bold text-xs sm:text-sm hover:text-[#3d2d19] transition-colors"
               >
                 Shipping & Delivery
               </a>
             </div>
-            <div className="text-[#1d1209] font-bold text-sm sm:text-base text-center sm:text-right">
+            <div className="text-[#1d1209] font-bold text-xs sm:text-sm break-all sm:break-normal">
               Contact Us – suma@consciouskarma.co
             </div>
           </div>
