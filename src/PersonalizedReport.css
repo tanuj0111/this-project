@@ -274,6 +274,15 @@
   flex-wrap: wrap;
 }
 
+.ck-btn-row-horizontal {
+  flex-direction: row !important;
+}
+
+.ck-btn-row-horizontal .ck-pill {
+  flex: 1;
+  min-width: 0;
+}
+
 .ck-inline-inputs {
   display: flex;
   gap: 12px;
@@ -683,6 +692,18 @@
     gap: 12px;
   }
   
+  .ck-btn-row-horizontal {
+    flex-direction: row !important;
+    gap: 8px;
+  }
+  
+  .ck-btn-row-horizontal .ck-pill {
+    width: auto;
+    flex: 1;
+    padding: 12px 10px;
+    font-size: 15px;
+  }
+  
   .ck-pill {
     width: 100%;
     text-align: center;
@@ -824,6 +845,15 @@
   .ck-tag {
     padding: 8px 16px;
     font-size: 13px;
+  }
+  
+  .ck-btn-row-horizontal {
+    gap: 6px;
+  }
+  
+  .ck-btn-row-horizontal .ck-pill {
+    padding: 10px 8px;
+    font-size: 14px;
   }
   
   .ck-form-title-outside {

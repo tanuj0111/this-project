@@ -695,7 +695,7 @@ const ConsciousKarmaPage = () => {
 
                   <div className="ck-field-block">
                     <div className="ck-label">Gender</div>
-                    <div className="ck-btn-row">
+                    <div className="ck-btn-row ck-btn-row-horizontal">
                       {["Female", "Male", "Other"].map((g) => (
                         <button
                           key={g}
