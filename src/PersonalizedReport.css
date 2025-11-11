@@ -153,19 +153,19 @@
   max-width: 800px;
   border: 4px solid #ff8a2b;
   border-radius: 20px;
-  padding: 50px 60px 40px;
+  padding: 35px 45px 30px;
   background: transparent;
   position: relative;
 }
 
 .ck-form-inner {
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .ck-form-heading {
   font-size: 28px;
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: #ffffff;
 }
 
@@ -173,15 +173,14 @@
 
 /* FIELD BLOCKS */
 .ck-field-block {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .ck-label {
   font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 10px;
+  font-weight: 500;
+  margin-bottom: 8px;
   color: #ffffff;
-  display: block;
 }
 
 .ck-label-right {
@@ -271,7 +270,8 @@
   display: flex;
   gap: 16px;
   align-items: center;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 .ck-btn-row-horizontal {
@@ -279,6 +279,16 @@
 }
 
 .ck-btn-row-horizontal .ck-pill {
+  flex: 1;
+  min-width: 0;
+}
+
+.ck-btn-row .ck-pill {
+  flex: 1;
+  min-width: 0;
+}
+
+.ck-btn-row .ck-input {
   flex: 1;
   min-width: 0;
 }
@@ -318,8 +328,8 @@
 
 /* PARALLEL/PREVIOUS NUMBER BLOCKS */
 .ck-parallel-block {
-  margin-bottom: 30px;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
   border-bottom: 1px solid #2a2a2a;
 }
 
@@ -331,7 +341,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .ck-parallel-header-actions {
@@ -377,11 +387,11 @@
 }
 
 .ck-add-btn-wrap {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 16px;
+  margin-bottom: 16px;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
 }
 
 .ck-add-btn {
@@ -412,8 +422,8 @@
 .ck-step-nav {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
-  padding-top: 20px;
+  margin-top: 20px;
+  padding-top: 16px;
 }
 
 .single-step-nav {
@@ -441,9 +451,10 @@
 /* FORM FOOTER */
 .ck-form-footer {
   display: flex;
+  flex-direction: row;
   align-items: stretch;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 25px;
   width: 100%;
   max-width: 600px;
   margin-left: auto;
@@ -488,7 +499,7 @@
 }
 
 .ck-delivery-text {
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: center;
   font-size: 16px;
   line-height: 1.6;
@@ -499,29 +510,29 @@
 
 /* FAQ SECTION */
 .ck-faq-section {
-  padding: 60px 40px 80px;
+  padding: 40px 40px 60px;
   text-align: center;
 }
 
 .ck-faq-title {
   font-size: 36px;
   font-weight: 400;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: #ffffff;
 }
 
 .ck-faq-list {
   max-width: 1000px;
-  margin: 0 auto 50px;
+  margin: 0 auto 30px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
 }
 
 .ck-faq-item {
   border-radius: 12px;
   border: 3px solid #3a3a3a;
-  padding: 24px 30px;
+  padding: 18px 24px;
   font-size: 20px;
   text-align: center;
   cursor: pointer;
@@ -529,7 +540,7 @@
   background: transparent;
   color: #ffffff;
   position: relative;
-  min-height: 70px;
+  min-height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -541,11 +552,11 @@
 
 .ck-faq-item-active {
   border-color: #ff8a2b;
-  min-height: 200px;
+  min-height: 180px;
   align-items: flex-start;
   flex-direction: column;
   text-align: left;
-  padding: 30px;
+  padding: 24px;
 }
 
 .ck-faq-item-active .faq-question {
@@ -687,9 +698,10 @@
   }
   
   .ck-btn-row {
-    flex-direction: column;
+    flex-direction: row !important;
     align-items: stretch;
-    gap: 12px;
+    gap: 8px;
+    flex-wrap: nowrap;
   }
   
   .ck-btn-row-horizontal {
@@ -704,15 +716,28 @@
     font-size: 15px;
   }
   
+  .ck-btn-row .ck-pill {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 10px;
+    font-size: 15px;
+  }
+  
+  .ck-btn-row .ck-input {
+    flex: 1;
+    min-width: 0;
+    font-size: 15px;
+    padding: 12px 10px;
+  }
+  
   .ck-pill {
-    width: 100%;
     text-align: center;
   }
   
   .age-input,
   .month-input,
   .year-input {
-    max-width: 100%;
+    max-width: none;
   }
   
   .ck-inline-inputs {
@@ -772,23 +797,23 @@
   }
   
   .ck-form-footer {
-    flex-direction: column;
+    flex-direction: row !important;
     margin-top: 30px;
     max-width: 100%;
   }
   
   .ck-price-pill {
-    border-radius: 12px 12px 0 0;
-    border-right: 3px solid #ff8a2b;
-    border-bottom: none;
+    border-radius: 12px 0 0 12px;
+    border-right: none;
+    border-bottom: 3px solid #ff8a2b;
     font-size: 16px;
     padding: 14px 20px;
   }
   
   .ck-proceed-btn {
-    border-radius: 0 0 12px 12px;
-    border-left: 3px solid #ff8a2b;
-    border-top: none;
+    border-radius: 0 12px 12px 0;
+    border-left: none;
+    border-top: 3px solid #ff8a2b;
     font-size: 16px;
     padding: 14px 20px;
   }
@@ -852,6 +877,20 @@
   }
   
   .ck-btn-row-horizontal .ck-pill {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+  
+  .ck-btn-row {
+    gap: 6px;
+  }
+  
+  .ck-btn-row .ck-pill {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+  
+  .ck-btn-row .ck-input {
     padding: 10px 8px;
     font-size: 14px;
   }

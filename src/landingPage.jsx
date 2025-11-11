@@ -1138,6 +1138,32 @@ export default function ConsciousKarmaSections() {
   const [showForm, setShowForm] = useState(false);
   const [prefillIsd, setPrefillIsd] = useState("+91");
   const [prefillMobile, setPrefillMobile] = useState("");
+  const [expandedBlog, setExpandedBlog] = useState(null);
+
+  // --- BLOG ITEMS (local demo data) ---
+  const blogItems = [
+    {
+      img: gradeImg,
+      title: "Grades of Energy",
+      excerpt: "How different mobile number patterns influence energetic grades.",
+      content:
+        "Numbers carry vibrations. In this post we explore how digits combine to form energy grades, what to look for in your number, and simple practices to harmonize your communication frequency.",
+    },
+    {
+      img: blankStarImg,
+      title: "Finding Your Lucky Pattern",
+      excerpt: "Small patterns can yield big shifts — learn to spot them.",
+      content:
+        "Lucky patterns are often subtle. We'll walk through examples, how to test patterns against real life events, and a practical checklist to identify patterns that work for you.",
+    },
+    {
+      img: mobileEnergyFlow,
+      title: "Mobile Number Energy Flow",
+      excerpt: "Understand the flow your number creates in daily life.",
+      content:
+        "Your mobile number is a channel. This article dissects how call/message behaviour, number cycles, and timing shape the energy flow around you — and what to do if the flow feels blocked.",
+    },
+  ];
 
   // ESC & scroll lock when overlay is open
   useEffect(() => {
@@ -1482,55 +1508,49 @@ export default function ConsciousKarmaSections() {
             Blogs
           </h2>
 
-          {/* 🔹 Blog Cards */}
+          {/* 🔹 Blog Cards (mapped with inline Read more) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 md:gap-8 lg:gap-[24px] justify-items-center max-w-[1200px] mx-auto">
-            {/* Blog 1 */}
-            <div className="w-full max-w-[400px] border-2 border-orange-400 rounded-lg overflow-hidden bg-[rgba(255,255,255,0.03)] hover:bg-[rgba(255,255,255,0.06)] transition-all">
-              <div className="aspect-square bg-gradient-to-br from-orange-400/20 to-orange-600/10 flex items-center justify-center">
-                <div className="text-5xl sm:text-6xl">📱</div>
-              </div>
-              <div className="p-4 sm:p-5 md:p-6 text-left">
-                <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-white">Mobile Number Energy</h3>
-                <p className="text-gray-300 text-sm mb-3 sm:mb-4">
-                  Discover how the energy of your mobile number influences your daily life, relationships, and career opportunities.
-                </p>
-                <a href="/blog/mobile-energy" className="text-orange-400 font-semibold text-sm hover:text-orange-300">
-                  Read more →
-                </a>
-              </div>
-            </div>
+            {blogItems.map((b, i) => (
+              <div
+                key={i}
+                className="w-full max-w-[400px] border-2 border-orange-400 rounded-lg overflow-hidden bg-[rgba(255,255,255,0.03)] hover:bg-[rgba(255,255,255,0.06)] transition-all"
+              >
+                <div className="aspect-square bg-gradient-to-br from-orange-400/20 to-orange-600/10 flex items-center justify-center">
+                  {b.img ? (
+                    <img src={b.img} alt={b.title} className="w-full h-full object-cover" />
+                  ) : (
+                    <div className="text-5xl sm:text-6xl">✦</div>
+                  )}
+                </div>
+                <div className="p-4 sm:p-5 md:p-6 text-left">
+                  <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-white">{b.title}</h3>
+                  <p className="text-gray-300 text-sm mb-3 sm:mb-4">{b.excerpt}</p>
 
-            {/* Blog 2 */}
-            <div className="w-full max-w-[400px] border-2 border-orange-400 rounded-lg overflow-hidden bg-[rgba(255,255,255,0.03)] hover:bg-[rgba(255,255,255,0.06)] transition-all">
-              <div className="aspect-square bg-gradient-to-br from-orange-400/20 to-orange-600/10 flex items-center justify-center">
-                <div className="text-5xl sm:text-6xl">✨</div>
+                  {expandedBlog === i ? (
+                    <div className="mt-2 text-sm text-gray-200">
+                      <p className="mb-3">{b.content}</p>
+                      <button
+                        className="btn text-sm px-3 py-2"
+                        onClick={() => setExpandedBlog(null)}
+                        aria-expanded={true}
+                      >
+                        Read less
+                      </button>
+                    </div>
+                  ) : (
+                    <div className="mt-2">
+                      <button
+                        className="text-orange-400 font-semibold text-sm hover:text-orange-300"
+                        onClick={() => setExpandedBlog(i)}
+                        aria-expanded={false}
+                      >
+                        Read more →
+                      </button>
+                    </div>
+                  )}
+                </div>
               </div>
-              <div className="p-4 sm:p-5 md:p-6 text-left">
-                <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-white">Numerology & Karma</h3>
-                <p className="text-gray-300 text-sm mb-3 sm:mb-4">
-                  Explore the ancient science of numerology and understand how numbers shape your karma and destiny.
-                </p>
-                <a href="/blog/numerology-karma" className="text-orange-400 font-semibold text-sm hover:text-orange-300">
-                  Read more →
-                </a>
-              </div>
-            </div>
-
-            {/* Blog 3 */}
-            <div className="w-full max-w-[400px] border-2 border-orange-400 rounded-lg overflow-hidden bg-[rgba(255,255,255,0.03)] hover:bg-[rgba(255,255,255,0.06)] transition-all sm:col-span-2 lg:col-span-1">
-              <div className="aspect-square bg-gradient-to-br from-orange-400/20 to-orange-600/10 flex items-center justify-center">
-                <div className="text-6xl">🔮</div>
-              </div>
-              <div className="p-6 text-left">
-                <h3 className="text-xl font-semibold mb-3 text-white">Choosing Your Number</h3>
-                <p className="text-gray-300 text-sm mb-4">
-                  Learn the art of selecting a mobile number that aligns with your goals and amplifies positive vibrations.
-                </p>
-                <a href="/blog/choosing-number" className="text-orange-400 font-semibold text-sm hover:text-orange-300">
-                  Read more →
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
 
           {/* 🔹 Bottom “more >>>” */}
