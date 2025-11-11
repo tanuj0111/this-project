@@ -1259,14 +1259,8 @@ export default function ConsciousKarmaSections() {
               </div>
 
               {/* Price + Inputs */}
-              <div className="w-full max-w-[280px] sm:max-w-[300px] flex flex-col items-center">
-                {/* <div className="flex items-center justify-center gap-2 mb-[8px]">
-            <span className="text-white text-lg font-medium">$ 269</span>
-            <div className="w-20 h-8 border-2 border-orange-400 rounded-md"></div>
-            <div className="w-8 h-8 border-2 border-gray-500 rounded-md"></div>
-          </div> */}
-
-                <div className="flex justify-center w-full ">
+              <div className="w-full max-w-[340px] sm:max-w-[360px] flex flex-col items-center px-2 sm:px-0">
+                <div className="w-full">
                   <InlineInstantReportForm
                     ctaLabel="Get Instant Report"
                     onSubmit={openPrefilledModal}
@@ -1686,19 +1680,19 @@ function InlineInstantReportForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className="p-3 bg-black border-2 border-black rounded-[10px] flex flex-col gap-3 w-full"
+      className="p-2 sm:p-3 bg-black border-2 border-gray-800 rounded-[10px] flex flex-col gap-2 sm:gap-3 w-full"
       aria-label="Instant Report Form"
     >
-      <div className="flex gap-2 sm:gap-3 w-full">
+      <div className="flex gap-2 w-full">
         <select
           value={isd}
           onChange={(e) => setIsd(e.target.value)}
-          className="w-[85px] sm:w-[95px] p-2 sm:p-[10px] rounded-md bg-black border border-gray-500 text-gray-50 text-sm sm:text-base font-medium appearance-none bg-no-repeat pr-7 sm:pr-8 cursor-pointer hover:border-gray-400 transition-colors"
+          className="w-[80px] sm:w-[90px] p-2 rounded-md bg-black border border-gray-500 text-gray-50 text-xs sm:text-sm font-medium appearance-none bg-no-repeat pr-6 sm:pr-7 cursor-pointer hover:border-gray-400 focus:border-orange-400 focus:outline-none transition-colors"
           style={{
             backgroundImage:
               'url(\'data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"%3e%3cpath stroke="%239ca3af" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6 8 4 4 4-4"/%3e%3c/svg%3e\')',
-            backgroundPosition: 'right 0.4rem center',
-            backgroundSize: '1.2em',
+            backgroundPosition: 'right 0.3rem center',
+            backgroundSize: '1em',
           }}
           aria-label="Country code"
         >
@@ -1709,7 +1703,7 @@ function InlineInstantReportForm({
           <option value="+971">🇦🇪 +971</option>
         </select>
         <input
-          className="flex-1 p-2 sm:p-[10px] rounded-md bg-black border border-gray-500 text-gray-50 text-sm sm:text-base placeholder:text-gray-500 hover:border-gray-400 focus:border-orange-400 focus:outline-none transition-colors"
+          className="flex-1 p-2 rounded-md bg-black border border-gray-500 text-gray-50 text-xs sm:text-sm placeholder:text-gray-500 hover:border-gray-400 focus:border-orange-400 focus:outline-none transition-colors"
           type="tel"
           inputMode="numeric"
           pattern="[0-9 ]*"
@@ -1720,24 +1714,24 @@ function InlineInstantReportForm({
         />
       </div>
 
-      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3 justify-center w-full">
-        <span className="px-3 py-2 text-white text-xl sm:text-2xl font-arsenal font-bold rounded-md w-full sm:w-[100px] flex items-center justify-center border border-gray-700">
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 justify-center w-full">
+        <span className="px-2 py-2 text-white text-lg sm:text-xl font-arsenal font-bold rounded-md w-full sm:w-[90px] flex items-center justify-center border border-gray-700">
           ₹269
         </span>
         <button
-          className="px-5 py-2 bg-orange-400 text-white font-balgin text-sm sm:text-base rounded-md hover:bg-orange-500 transition w-full sm:w-[250px]"
+          className="px-4 py-2 bg-orange-400 text-white font-balgin text-xs sm:text-sm rounded-md hover:bg-orange-500 transition w-full sm:w-[220px]"
           type="submit"
         >
           {ctaLabel}
         </button>
 
         <a
-          className="w-full sm:w-[38px] h-[38px] border border-gray-500 rounded-md bg-black hover:bg-gray-800 flex items-center justify-center"
+          className="w-full sm:w-[36px] h-[36px] border border-gray-500 rounded-md bg-black hover:bg-gray-800 flex items-center justify-center transition-colors"
           href="/sample-report"
           aria-label="View Sample Report (PDF)"
         >
           <svg
-            className="w-5 h-5"
+            className="w-4 h-4 sm:w-5 sm:h-5"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -1750,7 +1744,7 @@ function InlineInstantReportForm({
             <path d="M14 2v6h6" />
             <path d="M8 13h8M8 17h8" />
           </svg>
-          <span className="sm:hidden ml-2">View Sample</span>
+          <span className="sm:hidden ml-2 text-xs">View Sample</span>
         </a>
       </div>
     </form>
