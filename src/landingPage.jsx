@@ -1259,7 +1259,7 @@ export default function ConsciousKarmaSections() {
               </div>
 
               {/* Price + Inputs */}
-              <div className="w-full max-w-[340px] sm:max-w-[360px] flex flex-col items-center px-2 sm:px-0">
+              <div className="w-full max-w-[95%] sm:max-w-[360px] flex flex-col items-center px-0">
                 <div className="w-full">
                   <InlineInstantReportForm
                     ctaLabel="Get Instant Report"
@@ -1555,7 +1555,7 @@ export default function ConsciousKarmaSections() {
           </p>
 
           {/* 🔹 Icon Row */}
-          <div className="flex justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-[32px] flex-wrap">
+          <div className="flex justify-center items-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 w-full overflow-x-auto px-4 scrollbar-hide">
             {[
               financeImg,
               fortuneImg,
@@ -1567,7 +1567,7 @@ export default function ConsciousKarmaSections() {
                 key={i}
                 src={src}
                 alt=""
-                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain"
+                className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 flex-shrink-0 object-contain"
               />
             ))}
           </div>
@@ -1680,19 +1680,19 @@ function InlineInstantReportForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className="p-2 sm:p-3 bg-black border-2 border-gray-800 rounded-[10px] flex flex-col gap-2 sm:gap-3 w-full"
+      className="p-2 sm:p-3 bg-transparent rounded-[10px] flex flex-col gap-2 sm:gap-3 w-full"
       aria-label="Instant Report Form"
     >
       <div className="flex gap-2 w-full">
         <select
           value={isd}
           onChange={(e) => setIsd(e.target.value)}
-          className="w-[80px] sm:w-[90px] p-2 rounded-md bg-black border border-gray-500 text-gray-50 text-xs sm:text-sm font-medium appearance-none bg-no-repeat pr-6 sm:pr-7 cursor-pointer hover:border-gray-400 focus:border-orange-400 focus:outline-none transition-colors"
+          className="w-[75px] sm:w-[85px] p-2 rounded-md bg-black border border-gray-500 text-gray-50 text-xs sm:text-sm font-medium appearance-none bg-no-repeat pr-6 cursor-pointer hover:border-gray-400 focus:border-orange-400 focus:outline-none transition-colors"
           style={{
             backgroundImage:
               'url(\'data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"%3e%3cpath stroke="%239ca3af" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6 8 4 4 4-4"/%3e%3c/svg%3e\')',
-            backgroundPosition: 'right 0.3rem center',
-            backgroundSize: '1em',
+            backgroundPosition: 'right 0.25rem center',
+            backgroundSize: '0.9em',
           }}
           aria-label="Country code"
         >
@@ -1707,7 +1707,7 @@ function InlineInstantReportForm({
           type="tel"
           inputMode="numeric"
           pattern="[0-9 ]*"
-          placeholder="Enter mobile number"
+          placeholder="Mobile number"
           value={mobile}
           onChange={(e) => setMobile(e.target.value)}
           aria-label="Mobile number"
