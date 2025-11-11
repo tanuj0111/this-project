@@ -64,7 +64,7 @@
 /* HERO SECTION */
 .ck-hero {
   text-align: center;
-  padding: 100px 40px 80px;
+  padding: 140px 40px 80px;
 }
 
 .ck-hero-text {
@@ -558,65 +558,129 @@
 }
 
 /* RESPONSIVE */
+@media (max-width: 1200px) {
+  .ck-form-card {
+    max-width: 700px;
+    padding: 40px 50px 35px;
+  }
+}
+
 @media (max-width: 1024px) {
   .ck-header {
     padding: 30px 40px;
   }
   
+  .ck-hero {
+    padding: 80px 30px 60px;
+  }
+  
+  .ck-hero-text,
+  .ck-hero-sub {
+    font-size: 28px;
+  }
+  
   .ck-form-card {
-    padding: 40px 40px 30px;
+    padding: 35px 40px 30px;
+    max-width: 650px;
   }
   
   .ck-field-two-col {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+  
+  .ck-label-right {
+    margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
 }
 
 @media (max-width: 768px) {
   .ck-header {
-    padding: 20px 20px;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
   }
   
   .ck-logo-conscious,
   .ck-logo-karma {
-    font-size: 22px;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .ck-logo {
+    align-items: center;
   }
   
   .ck-consult-btn {
-    padding: 10px 24px;
-    font-size: 16px;
+    padding: 12px 32px;
+    font-size: 18px;
+    width: 100%;
+    max-width: 300px;
   }
   
   .ck-hero {
-    padding: 60px 20px 40px;
+    padding: 120px 20px 40px;
   }
   
   .ck-hero-text,
   .ck-hero-sub {
-    font-size: 24px;
+    font-size: 22px;
+  }
+  
+  .ck-tags-wrap {
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+  
+  .ck-tags-row {
+    gap: 12px;
   }
   
   .ck-tag {
-    padding: 12px 24px;
-    font-size: 16px;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-width: 2px;
+  }
+  
+  .ck-form-section {
+    padding: 30px 15px 60px;
   }
   
   .ck-form-title-outside {
-    font-size: 28px;
+    font-size: 24px;
+    margin-bottom: 20px;
   }
   
   .ck-form-card {
-    padding: 30px 24px 24px;
+    padding: 25px 20px 20px;
+    border-width: 3px;
+    max-width: 100%;
   }
   
   .ck-form-heading {
-    font-size: 24px;
+    font-size: 22px;
+    margin-bottom: 24px;
+  }
+  
+  .ck-label {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .ck-input,
+  .ck-input-flex,
+  .ck-pill {
+    font-size: 16px;
+    padding: 12px 16px;
+    border-width: 2px;
   }
   
   .ck-btn-row {
     flex-direction: column;
     align-items: stretch;
+    gap: 12px;
   }
   
   .ck-pill {
@@ -624,24 +688,213 @@
     text-align: center;
   }
   
+  .age-input,
+  .month-input,
+  .year-input {
+    max-width: 100%;
+  }
+  
+  .ck-inline-inputs {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .isd-input {
+    width: 70px;
+  }
+  
   .ck-field-row-between {
     flex-direction: column;
     align-items: stretch;
+    gap: 16px;
+  }
+  
+  .ck-inline-group {
+    width: 100%;
+  }
+  
+  .ck-label-right {
+    margin-left: 0;
+    text-align: left;
+  }
+  
+  .ck-parallel-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .ck-parallel-header-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  .ck-add-btn-wrap {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  
+  .ck-add-btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .ck-step-nav {
+    margin-top: 24px;
+    padding-top: 16px;
+  }
+  
+  .ck-prev-link,
+  .ck-next-link {
+    font-size: 14px;
   }
   
   .ck-form-footer {
     flex-direction: column;
+    margin-top: 30px;
+    max-width: 100%;
   }
   
   .ck-price-pill {
     border-radius: 12px 12px 0 0;
     border-right: 3px solid #ff8a2b;
     border-bottom: none;
+    font-size: 16px;
+    padding: 14px 20px;
   }
   
   .ck-proceed-btn {
     border-radius: 0 0 12px 12px;
     border-left: 3px solid #ff8a2b;
     border-top: none;
+    font-size: 16px;
+    padding: 14px 20px;
+  }
+  
+  .ck-delivery-text {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .ck-faq-section {
+    padding: 40px 20px 60px;
+  }
+  
+  .ck-faq-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .ck-faq-list {
+    gap: 16px;
+  }
+  
+  .ck-faq-item {
+    font-size: 16px;
+    padding: 18px 20px;
+    border-width: 2px;
+    min-height: 60px;
+  }
+  
+  .ck-faq-item-active {
+    min-height: auto;
+    padding: 20px;
+  }
+  
+  .ck-faq-item-active .faq-answer {
+    font-size: 14px;
+  }
+  
+  .ck-faq-footer {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ck-hero {
+    padding: 110px 20px 35px;
+  }
+  
+  .ck-hero-text,
+  .ck-hero-sub {
+    font-size: 18px;
+  }
+  
+  .ck-tag {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  
+  .ck-form-title-outside {
+    font-size: 20px;
+  }
+  
+  .ck-form-card {
+    padding: 20px 16px;
+  }
+  
+  .ck-form-heading {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .ck-label {
+    font-size: 14px;
+  }
+  
+  .ck-input,
+  .ck-input-flex,
+  .ck-pill {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+  
+  .isd-input {
+    width: 65px;
+    font-size: 13px;
+  }
+  
+  .ck-toggle-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+  }
+  
+  .ck-remove-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .ck-add-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  
+  .ck-if-any-text {
+    font-size: 14px;
+  }
+  
+  .ck-price-pill,
+  .ck-proceed-btn {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+  
+  .ck-faq-title {
+    font-size: 24px;
+  }
+  
+  .ck-faq-item {
+    font-size: 14px;
+    padding: 16px;
+  }
+  
+  .ck-faq-item-active {
+    padding: 18px;
+  }
+  
+  .ck-faq-item-active .faq-answer {
+    font-size: 13px;
   }
 }

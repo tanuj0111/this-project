@@ -14,6 +14,7 @@ const MAX_PARALLEL_NUMBERS = 3;
 
 const ConsciousKarmaPage = () => {
   const [step, setStep] = useState(0); // 0..4
+  const [menuOpen, setMenuOpen] = useState(false); // For hamburger menu
 
   // ----- GENERAL INFO -----
   const [general, setGeneral] = useState({
@@ -565,14 +566,73 @@ const ConsciousKarmaPage = () => {
 
   return (
     <div className="ck-page">
-      {/* HEADER */}
-      <header className="ck-header">
-        <div className="ck-logo">
-          <div className="ck-logo-conscious">conscious</div>
-          <div className="ck-logo-karma">KARMA</div>
+      {/* RESPONSIVE HEADER from Landing Page */}
+      <header className="fixed top-0 left-0 right-0 flex items-center justify-between py-3 sm:py-4 z-50 px-3 sm:px-6 lg:px-8 bg-black/90 backdrop-blur-sm">
+        <div className="leading-[1] flex flex-col items-start cursor-pointer">
+          <span className="block text-[18px] sm:text-[24px] md:text-[26px] lg:text-[28px] text-white">
+            conscious
+          </span>
+          <span className="block text-[20px] sm:text-[26px] md:text-[30px] lg:text-[32px] tracking-[0.5px] sm:tracking-[2px] mt-[-2px] sm:mt-[-8px] text-orange-400 font-balgin">
+            KARMA
+          </span>
         </div>
-        <button className="ck-consult-btn">Consult</button>
+
+        {/* Hamburger Icon */}
+        <button
+          className="flex flex-col justify-between w-[40px] h-[36px] sm:w-[46px] sm:h-[42px] p-[6px] sm:p-[8px] rounded-[12px] bg-transparent cursor-pointer transition-all duration-300"
+          onClick={() => setMenuOpen((v) => !v)}
+        >
+          {[0, 1, 2].map((i) => (
+            <span
+              key={i}
+              className={`block w-[28px] sm:w-[45px] h-[2.5px] sm:h-[3px] bg-white rounded-[2px] transition-all duration-300 ${
+                menuOpen
+                  ? i === 0
+                    ? "rotate-45 translate-y-[8px] sm:translate-y-[10px]"
+                    : i === 1
+                    ? "opacity-0"
+                    : "-rotate-45 -translate-y-[8px] sm:-translate-y-[10px]"
+                  : ""
+              }`}
+            />
+          ))}
+        </button>
       </header>
+
+      {/* Drawer/Menu */}
+      {menuOpen && (
+        <>
+          <div
+            className="fixed inset-0 bg-[rgba(0,0,0,0.5)] backdrop-blur-[2px] z-40"
+            onClick={() => setMenuOpen(false)}
+          />
+          <nav
+            className={`fixed top-0 right-0 h-full w-[min(340px,92vw)] bg-[#0f0f0f] border-l border-[#333] shadow-[0_20px_60px_rgba(0,0,0,0.5)] z-50 flex flex-col gap-[8px] p-[22px_20px] transition-transform duration-300 ease-in-out ${
+              menuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
+          >
+            <div className="font-balgin font-bold text-white mb-2">Menu</div>
+            {[
+              ["Home", "/"],
+              ["Instant Report", "/"],
+              ["Personalised Report", "/personalised-report"],
+              ["Consult", "/consult"],
+            ].map(([label, link], i) => (
+              <a
+                key={i}
+                href={link}
+                className="p-3 border border-[#3a3a3a] rounded-[12px] bg-[#141414] hover:bg-[#191919] hover:border-[#555] transition text-gray-50 font-balgin font-bold"
+                onClick={() => setMenuOpen(false)}
+              >
+                {label}
+              </a>
+            ))}
+          </nav>
+        </>
+      )}
+
+      {/* Add padding-top to prevent content from going under fixed header */}
+      <div className="pt-16 sm:pt-20"></div>
 
       {/* HERO */}
       <section className="ck-hero">
@@ -1363,6 +1423,41 @@ const ConsciousKarmaPage = () => {
           For any questions, write to us at hello@consciouskarma.co
         </div>
       </section>
+
+      {/* RESPONSIVE FOOTER from Landing Page */}
+      <footer className="bg-orange-400 py-4 sm:py-5 md:py-6 mt-8">
+        <div className="container mx-auto px-4 sm:px-6 flex flex-col lg:flex-row gap-3 sm:gap-4 items-center justify-between text-center lg:text-left">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center lg:justify-start">
+            <a
+              href="/termsandconditions"
+              className="text-[#1d1209] underline font-bold text-xs sm:text-sm hover:text-[#3d2d19] transition-colors"
+            >
+              Terms & Conditions
+            </a>
+            <a
+              href="/privacy-policy"
+              className="text-[#1d1209] underline font-bold text-xs sm:text-sm hover:text-[#3d2d19] transition-colors"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="/refund-policy"
+              className="text-[#1d1209] underline font-bold text-xs sm:text-sm hover:text-[#3d2d19] transition-colors"
+            >
+              Refund Policy
+            </a>
+            <a
+              href="/shipping-policy"
+              className="text-[#1d1209] underline font-bold text-xs sm:text-sm hover:text-[#3d2d19] transition-colors"
+            >
+              Shipping & Delivery
+            </a>
+          </div>
+          <div className="text-[#1d1209] font-bold text-xs sm:text-sm break-all sm:break-normal">
+            Contact Us – suma@consciouskarma.co
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
