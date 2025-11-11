@@ -1680,14 +1680,14 @@ function InlineInstantReportForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className="p-2 sm:p-3 bg-transparent rounded-[10px] flex flex-col gap-2 sm:gap-3 w-full"
+      className="p-3 sm:p-4 bg-transparent rounded-[10px] flex flex-col gap-3 sm:gap-4 w-full"
       aria-label="Instant Report Form"
     >
-      <div className="flex gap-2 w-full">
+      <div className="flex gap-2 sm:gap-3 w-full">
         <select
           value={isd}
           onChange={(e) => setIsd(e.target.value)}
-          className="w-[75px] sm:w-[85px] p-2 rounded-md bg-black border border-gray-500 text-gray-50 text-xs sm:text-sm font-medium appearance-none bg-no-repeat pr-6 cursor-pointer hover:border-gray-400 focus:border-orange-400 focus:outline-none transition-colors"
+          className="w-[70px] sm:w-[85px] p-2.5 sm:p-3 rounded-md bg-black border border-gray-500 text-gray-50 text-[11px] sm:text-sm font-medium appearance-none bg-no-repeat pr-6 cursor-pointer hover:border-gray-400 focus:border-orange-400 focus:outline-none transition-colors"
           style={{
             backgroundImage:
               'url(\'data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"%3e%3cpath stroke="%239ca3af" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6 8 4 4 4-4"/%3e%3c/svg%3e\')',
@@ -1703,7 +1703,7 @@ function InlineInstantReportForm({
           <option value="+971">🇦🇪 +971</option>
         </select>
         <input
-          className="flex-1 p-2 rounded-md bg-black border border-gray-500 text-gray-50 text-xs sm:text-sm placeholder:text-gray-500 hover:border-gray-400 focus:border-orange-400 focus:outline-none transition-colors"
+          className="flex-1 p-2.5 sm:p-3 rounded-md bg-black border border-gray-500 text-gray-50 text-[13px] sm:text-sm placeholder:text-gray-500 hover:border-gray-400 focus:border-orange-400 focus:outline-none transition-colors"
           type="tel"
           inputMode="numeric"
           pattern="[0-9 ]*"
@@ -1714,19 +1714,19 @@ function InlineInstantReportForm({
         />
       </div>
 
-      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 justify-center w-full">
-        <span className="px-2 py-2 text-white text-lg sm:text-xl font-arsenal font-bold rounded-md w-full sm:w-[90px] flex items-center justify-center border border-gray-700">
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3 justify-center w-full">
+        <span className="px-3 py-2.5 sm:py-3 text-white text-[17px] sm:text-xl font-arsenal font-bold rounded-md w-full sm:w-[90px] flex items-center justify-center border border-gray-700">
           ₹269
         </span>
         <button
-          className="px-4 py-2 bg-orange-400 text-white font-balgin text-xs sm:text-sm rounded-md hover:bg-orange-500 transition w-full sm:w-[220px]"
+          className="px-4 py-2.5 sm:py-3 bg-orange-400 text-white font-balgin text-[13px] sm:text-sm font-bold rounded-md hover:bg-orange-500 active:bg-orange-600 transition w-full sm:w-[220px]"
           type="submit"
         >
           {ctaLabel}
         </button>
 
         <a
-          className="w-full sm:w-[36px] h-[36px] border border-gray-500 rounded-md bg-black hover:bg-gray-800 flex items-center justify-center transition-colors"
+          className="w-full sm:w-[40px] h-[40px] sm:h-[44px] border border-gray-500 rounded-md bg-black hover:bg-gray-800 active:bg-gray-700 flex items-center justify-center transition-colors"
           href="/sample-report"
           aria-label="View Sample Report (PDF)"
         >
@@ -1744,7 +1744,7 @@ function InlineInstantReportForm({
             <path d="M14 2v6h6" />
             <path d="M8 13h8M8 17h8" />
           </svg>
-          <span className="sm:hidden ml-2 text-xs">View Sample</span>
+          <span className="sm:hidden ml-2 text-[12px] font-medium">View Sample</span>
         </a>
       </div>
     </form>
