@@ -1686,14 +1686,14 @@ function InlineInstantReportForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className="p-3 bg-black border-2 border-black rounded-[10px] flex flex-col gap-3"
+      className="p-3 bg-black border-2 border-black rounded-[10px] flex flex-col gap-3 w-full"
       aria-label="Instant Report Form"
     >
-      <div className="flex gap-3">
+      <div className="flex gap-2 w-full">
         <select
           value={isd}
           onChange={(e) => setIsd(e.target.value)}
-          className="w-[90px] p-2 rounded-md bg-black border border-gray-500 text-gray-50 appearance-none bg-no-repeat bg-right pr-8"
+          className="w-20 sm:w-[90px] p-2 rounded-md bg-black border border-gray-500 text-gray-50 text-sm sm:text-base appearance-none bg-no-repeat bg-right pr-8"
           style={{
             backgroundImage:
               'url(\'data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"%3e%3cpath stroke="%236b7280" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6 8 4 4 4-4"/%3e%3c/svg%3e\')',
@@ -1707,30 +1707,30 @@ function InlineInstantReportForm({
           <option value="+971">🇦🇪 +971</option>
         </select>
         <input
-          className="flex-1 p-2 rounded-md bg-black border border-gray-500 text-gray-50"
+          className="flex-1 p-2 rounded-md bg-black border border-gray-500 text-gray-50 text-sm sm:text-base"
           type="tel"
           inputMode="numeric"
           pattern="[0-9 ]*"
-          placeholder="Enter your mobile number"
+          placeholder="Mobile number"
           value={mobile}
           onChange={(e) => setMobile(e.target.value)}
           aria-label="Mobile number"
         />
       </div>
 
-      <div className="flex items-center gap-3 justify-center">
-        <span className="px-3 py-2  text-white text-2xl font-arsenal font-bold rounded-md w-[100px] flex items-center justify-center">
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3 justify-center w-full">
+        <span className="px-3 py-2 text-white text-xl sm:text-2xl font-arsenal font-bold rounded-md w-full sm:w-[100px] flex items-center justify-center border border-gray-700">
           ₹269
         </span>
         <button
-          className="px-5 py-2 bg-orange-400 text-white font-balgin rounded-md hover:bg-orange-500 transition w-[250px]"
+          className="px-5 py-2 bg-orange-400 text-white font-balgin text-sm sm:text-base rounded-md hover:bg-orange-500 transition w-full sm:w-[250px]"
           type="submit"
         >
           {ctaLabel}
         </button>
 
         <a
-          className="w-[38px] h-[38px] border border-gray-500 rounded-md bg-black hover:bg-gray-800 flex items-center justify-center"
+          className="w-full sm:w-[38px] h-[38px] border border-gray-500 rounded-md bg-black hover:bg-gray-800 flex items-center justify-center"
           href="/sample-report"
           aria-label="View Sample Report (PDF)"
         >
@@ -1748,6 +1748,7 @@ function InlineInstantReportForm({
             <path d="M14 2v6h6" />
             <path d="M8 13h8M8 17h8" />
           </svg>
+          <span className="sm:hidden ml-2">View Sample</span>
         </a>
       </div>
     </form>
