@@ -1171,12 +1171,12 @@ export default function ConsciousKarmaSections() {
       <section className="relative min-h-screen bg-black flex flex-col pt-12 sm:pt-16 md:pt-4 lg:pt-18">
         <div className="container mx-auto px-4 sm:px-6 flex-1 flex flex-col justify-center">
           {/* 🔹 Header (Brand + Hamburger) */}
-          <div className="absolute top-0 left-0 right-0 flex items-center justify-between py-3 sm:py-4 z-20 px-4 sm:px-6 lg:px-8">
-            <div className="leading-[1] flex flex-col items-start sm:items-center">
-              <span className="block text-[20px] sm:text-[24px] md:text-[26px] lg:text-[28px] text-white">
+          <div className="absolute top-0 left-0 right-0 flex items-center justify-between py-3 sm:py-4 z-20 px-3 sm:px-6 lg:px-8">
+            <div className="leading-[1] flex flex-col items-start">
+              <span className="block text-[18px] sm:text-[24px] md:text-[26px] lg:text-[28px] text-white">
                 conscious
               </span>
-              <span className="block text-[22px] sm:text-[26px] md:text-[30px] lg:text-[32px] tracking-[1px] sm:tracking-[2px] mt-[-4px] sm:mt-[-8px] text-orange-400 font-balgin">
+              <span className="block text-[20px] sm:text-[26px] md:text-[30px] lg:text-[32px] tracking-[0.5px] sm:tracking-[2px] mt-[-2px] sm:mt-[-8px] text-orange-400 font-balgin">
                 KARMA
               </span>
             </div>
@@ -1306,13 +1306,13 @@ export default function ConsciousKarmaSections() {
 
 
       {/* WHAT IS THIS */}
-      <section className="relative min-h-screen bg-black flex items-start justify-center pt-8 sm:pt-10 md:pt-12 lg:pt-[44px] pb-8 sm:pb-10 md:pb-12 lg:pb-[64px] px-4 sm:px-6">
-        <div className="container mx-auto max-w-full text-center">
-          <h2 className="font-balgin text-[20px] sm:text-[22px] md:text-[24px] lg:text-[25px] leading-[1.05] mb-3 sm:mb-4 font-bold tracking-[0.02em] text-white">
+      <section className="relative min-h-screen bg-black flex items-center justify-center pt-8 sm:pt-10 md:pt-12 lg:pt-[44px] pb-8 sm:pb-10 md:pb-12 lg:pb-[64px] px-4 sm:px-6">
+        <div className="container mx-auto max-w-full text-center flex flex-col justify-center">
+          <h2 className="font-balgin text-[20px] sm:text-[22px] md:text-[24px] lg:text-[25px] leading-[1.05] mb-8 sm:mb-10 md:mb-12 lg:mb-16 font-bold tracking-[0.02em] text-white">
             What is this
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12 lg:gap-[44px] items-start justify-items-center mt-12 sm:mt-16 md:mt-20 lg:mt-[100px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12 lg:gap-[44px] items-center justify-items-center">
             {/* Earth section */}
             <div className="flex flex-col items-center text-center gap-4 sm:gap-5 md:gap-6 lg:gap-[22px] w-full max-w-[320px]">
               <div className="w-[160px] h-[160px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] lg:w-[220px] lg:h-[220px] rounded-full grid place-items-center bg-transparent overflow-hidden">
@@ -1322,7 +1322,7 @@ export default function ConsciousKarmaSections() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <p className="m-0 leading-[1.7] text-[16px] sm:text-[17px] md:text-[18px] text-gray-200 font-thin w-full px-4 sm:px-0">
+              <p className="m-0 leading-[1.7] text-[16px] sm:text-[17px] md:text-[18px] text-gray-200 font-thin w-full px-2 sm:px-0">
                 The universe is alive with energy. These cosmic forces move
                 through us, subtly shaping thoughts, guiding actions, and
                 coloring experiences
@@ -1338,7 +1338,7 @@ export default function ConsciousKarmaSections() {
                   className="w-full h-full object-cover scale-[1.02]"
                 />
               </div>
-              <p className="m-0 leading-[1.7] text-[16px] sm:text-[17px] md:text-[18px] text-[#eaeaea] w-full px-4 sm:px-0">
+              <p className="m-0 leading-[1.7] text-[16px] sm:text-[17px] md:text-[18px] text-[#eaeaea] w-full px-2 sm:px-0">
                 Sages used numbers as symbols for celestial influence, capturing the essence of cosmic energies with simplicity and precision
               </p>
             </div>
@@ -1352,7 +1352,7 @@ export default function ConsciousKarmaSections() {
                   className="w-full h-full object-contain scale-[1.5]"
                 />
               </div>
-              <p className="m-0 leading-relaxed text-[16px] sm:text-[17px] md:text-[18px] text-thin w-full px-4 sm:px-0">
+              <p className="m-0 leading-relaxed text-[16px] sm:text-[17px] md:text-[18px] text-thin w-full px-2 sm:px-0">
                 Our choices and the energies we embrace shape destiny, creating the path we walk and the reality we manifest
               </p>
             </div>
