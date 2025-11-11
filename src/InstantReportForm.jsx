@@ -232,158 +232,152 @@ export default function InstantReportForm({
   };
 
   return (
-    <section className="section" id="instant-report">
-      <div className="container">
-        <h2 className="h2">Get Your Instant Report</h2>
-        <p className="lead">Enter details below. Apply a coupon or pay securely via Razorpay.</p>
+    <div className="w-full">
+      <div className="text-center mb-4 sm:mb-5 md:mb-6">
+        <h2 className="font-balgin text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 text-white">Get Your Instant Report</h2>
+        <p className="text-xs sm:text-sm text-gray-400">Enter details below. Apply a coupon or pay securely via Razorpay.</p>
+      </div>
 
-        <form onSubmit={handleSubmit} style={styles.form}>
-          <div style={styles.row}>
-            <div style={styles.field}>
-              <label style={styles.label}>Name</label>
-              <input
-                style={styles.input}
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Your name"
-              />
-              {errors.name && <span style={styles.err}>{errors.name}</span>}
-            </div>
-            <div style={styles.field}>
-              <label style={styles.label}>Email</label>
-              <input
-                style={styles.input}
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@email.com"
-              />
-              {errors.email && <span style={styles.err}>{errors.email}</span>}
-            </div>
+      <form onSubmit={handleSubmit} className="w-full space-y-3 sm:space-y-4">
+        {/* Name Field */}
+        <div className="w-full">
+          <label className="block font-bold text-gray-200 text-xs sm:text-sm mb-1.5 sm:mb-2">Name</label>
+          <input
+            className="w-full bg-[#1a1a1a] text-gray-100 border border-gray-700 rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:border-orange-400 focus:outline-none transition-colors placeholder:text-gray-600"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Your name"
+          />
+          {errors.name && <span className="block mt-1 text-red-300 text-xs sm:text-sm">{errors.name}</span>}
+        </div>
+
+        {/* Email Field */}
+        <div className="w-full">
+          <label className="block font-bold text-gray-200 text-xs sm:text-sm mb-1.5 sm:mb-2">Email</label>
+          <input
+            className="w-full bg-[#1a1a1a] text-gray-100 border border-gray-700 rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:border-orange-400 focus:outline-none transition-colors placeholder:text-gray-600"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="you@email.com"
+          />
+          {errors.email && <span className="block mt-1 text-red-300 text-xs sm:text-sm">{errors.email}</span>}
+        </div>
+
+        {/* Mobile Number */}
+        <div className="w-full">
+          <label className="block font-bold text-gray-200 text-xs sm:text-sm mb-1.5 sm:mb-2">Mobile Number</label>
+          <div className="flex gap-2 sm:gap-3">
+            <select
+              value={isd}
+              onChange={(e) => setIsd(e.target.value)}
+              className="bg-[#1a1a1a] text-gray-100 border border-gray-700 rounded-lg px-2 sm:px-3 py-2.5 sm:py-3 text-xs sm:text-sm w-[85px] sm:w-[95px] focus:border-orange-400 focus:outline-none transition-colors appearance-none bg-no-repeat cursor-pointer"
+              style={{
+                backgroundImage:
+                  'url(\'data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"%3e%3cpath stroke="%239ca3af" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6 8 4 4 4-4"/%3e%3c/svg%3e\')',
+                backgroundPosition: 'right 0.4rem center',
+                backgroundSize: '1em',
+                paddingRight: '1.75rem',
+              }}
+            >
+              <option value="+91">🇮🇳 +91</option>
+              <option value="+1">🇺🇸 +1</option>
+              <option value="+44">🇬🇧 +44</option>
+              <option value="+61">🇦🇺 +61</option>
+              <option value="+971">🇦🇪 +971</option>
+            </select>
+            <input
+              className="flex-1 bg-[#1a1a1a] text-gray-100 border border-gray-700 rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:border-orange-400 focus:outline-none transition-colors placeholder:text-gray-600"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value.replace(/\D/g, ''))}
+              placeholder="1234567890"
+              maxLength={10}
+            />
           </div>
+          {errors.phone && <span className="block mt-1 text-red-300 text-xs sm:text-sm">{errors.phone}</span>}
+        </div>
 
-          <div style={styles.row}>
-            <div style={styles.field}>
-              <label style={styles.label}>Mobile Number</label>
-              <div style={{ display: 'flex', gap: 10 }}>
-                <select
-                  value={isd}
-                  onChange={(e) => setIsd(e.target.value)}
-                  style={{ ...styles.input, width: 100 }}
-                >
-                  <option value="+91">🇮🇳 +91</option>
-                  <option value="+1">🇺🇸 +1</option>
-                  <option value="+44">🇬🇧 +44</option>
-                  <option value="+61">🇦🇺 +61</option>
-                  <option value="+971">🇦🇪 +971</option>
-                </select>
-                <input
-                  style={{ ...styles.input, flex: 1 }}
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value.replace(/\D/g, ''))}
-                  placeholder="10-digit mobile"
-                  maxLength={10}
-                />
-              </div>
-              {errors.phone && <span style={styles.err}>{errors.phone}</span>}
-            </div>
-            <div style={styles.field}>
-              <label style={styles.label}>Coupon (optional)</label>
-              <div style={{ display: 'flex', gap: 10 }}>
-                <input
-                  style={{ ...styles.input, flex: 1 }}
-                  value={coupon}
-                  onChange={(e) => setCoupon(e.target.value.trim())}
-                  placeholder="e.g. CKFREE100"
-                />
-                <button
-                  onClick={applyCoupon}
-                  disabled={!coupon || applying}
-                  type="button"
-                  className="pillBtn"
-                >
-                  {applying ? 'Applying…' : 'Apply'}
-                </button>
-              </div>
-              {couponInfo && (
-                <div style={{ marginTop: 8, color: '#b9f6ca' }}>
-                  Coupon applied. New total: ₹{(finalAmount / 100).toFixed(2)}
-                </div>
-              )}
-            </div>
-          </div>
-
-          <div style={styles.row}>
-            <div style={styles.field}>
-              <label style={styles.label}>Checkout as</label>
-              <div style={{ display: 'flex', gap: 14 }}>
-                <label style={styles.radio}>
-                  <input
-                    type="radio"
-                    checked={accountChoice === 'guest'}
-                    onChange={() => setAccountChoice('guest')}
-                  />{' '}
-                  Guest
-                </label>
-                <label style={styles.radio}>
-                  <input
-                    type="radio"
-                    checked={accountChoice === 'create'}
-                    onChange={() => setAccountChoice('create')}
-                  />{' '}
-                  Create account
-                </label>
-              </div>
-            </div>
-            {accountChoice === 'create' && (
-              <div style={styles.field}>
-                <label style={styles.label}>Password</label>
-                <input
-                  style={styles.input}
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Create a password"
-                />
-                {errors.password && <span style={styles.err}>{errors.password}</span>}
-              </div>
-            )}
-          </div>
-
-          <div
-            style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 16 }}
-          >
-            <div style={{ fontWeight: 800, fontSize: 22 }}>
-              Total: ₹{(finalAmount / 100).toFixed(2)}
-            </div>
-            <button type="submit" className="pillBtn" disabled={paying}>
-              {paying ? 'Processing…' : finalAmount === 0 ? 'Get Free Report' : 'Pay & Get Report'}
+        {/* Coupon Field */}
+        <div className="w-full">
+          <label className="block font-bold text-gray-200 text-xs sm:text-sm mb-1.5 sm:mb-2">Coupon (optional)</label>
+          <div className="flex gap-2 sm:gap-3">
+            <input
+              className="flex-1 bg-[#1a1a1a] text-gray-100 border border-gray-700 rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:border-orange-400 focus:outline-none transition-colors placeholder:text-gray-600"
+              value={coupon}
+              onChange={(e) => setCoupon(e.target.value.trim())}
+              placeholder="e.g. CKFREE100"
+            />
+            <button
+              onClick={applyCoupon}
+              disabled={!coupon || applying}
+              type="button"
+              className="px-4 sm:px-6 py-2.5 sm:py-3 bg-orange-500 text-white font-bold text-xs sm:text-sm rounded-lg hover:bg-orange-600 active:bg-orange-700 disabled:opacity-40 disabled:cursor-not-allowed transition-all whitespace-nowrap"
+            >
+              {applying ? 'Applying…' : 'Apply'}
             </button>
           </div>
-        </form>
-      </div>
-    </section>
+          {couponInfo && (
+            <div className="mt-2 text-green-400 text-xs sm:text-sm font-medium">
+              ✓ Coupon applied. New total: ₹{(finalAmount / 100).toFixed(2)}
+            </div>
+          )}
+        </div>
+
+        {/* Checkout Options */}
+        <div className="w-full">
+          <label className="block font-bold text-gray-200 text-xs sm:text-sm mb-2">Checkout as</label>
+          <div className="flex gap-4 sm:gap-6">
+            <label className="inline-flex items-center gap-2 font-semibold text-sm sm:text-base cursor-pointer text-gray-300 hover:text-white transition-colors">
+              <input
+                type="radio"
+                checked={accountChoice === 'guest'}
+                onChange={() => setAccountChoice('guest')}
+                className="w-4 h-4 sm:w-5 sm:h-5 accent-orange-500 cursor-pointer"
+              />
+              Guest
+            </label>
+            <label className="inline-flex items-center gap-2 font-semibold text-sm sm:text-base cursor-pointer text-gray-300 hover:text-white transition-colors">
+              <input
+                type="radio"
+                checked={accountChoice === 'create'}
+                onChange={() => setAccountChoice('create')}
+                className="w-4 h-4 sm:w-5 sm:h-5 accent-orange-500 cursor-pointer"
+              />
+              Create account
+            </label>
+          </div>
+        </div>
+
+        {/* Password Field (Conditional) */}
+        {accountChoice === 'create' && (
+          <div className="w-full">
+            <label className="block font-bold text-gray-200 text-xs sm:text-sm mb-1.5 sm:mb-2">Password</label>
+            <input
+              className="w-full bg-[#1a1a1a] text-gray-100 border border-gray-700 rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base focus:border-orange-400 focus:outline-none transition-colors placeholder:text-gray-600"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Create a password"
+            />
+            {errors.password && <span className="block mt-1 text-red-300 text-xs sm:text-sm">{errors.password}</span>}
+          </div>
+        )}
+
+        {/* Total & Submit */}
+        <div className="w-full pt-3 sm:pt-4 mt-2 sm:mt-3 border-t border-gray-800">
+          <div className="flex items-center justify-between mb-3 sm:mb-4">
+            <span className="font-extrabold text-lg sm:text-xl md:text-2xl text-white">
+              Total: ₹{(finalAmount / 100).toFixed(2)}
+            </span>
+          </div>
+          <button 
+            type="submit" 
+            className="w-full px-5 py-3 sm:py-3.5 bg-orange-500 text-white font-bold text-sm sm:text-base rounded-lg hover:bg-orange-600 active:bg-orange-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg shadow-orange-500/20"
+            disabled={paying}
+          >
+            {paying ? 'Processing…' : finalAmount === 0 ? 'Get Free Report' : ctaLabel}
+          </button>
+        </div>
+      </form>
+    </div>
   );
 }
-
-const styles = {
-  form: {
-    marginTop: 18,
-    background: 'rgba(255,255,255,.02)',
-    border: '1px solid #333',
-    borderRadius: 12,
-    padding: 22,
-    boxShadow: 'var(--shadow)',
-  },
-  row: { display: 'grid', gridTemplateColumns: '1fr', gap: 18, marginBottom: 14 },
-  field: { display: 'grid', gap: 8 },
-  label: { fontWeight: 700, color: '#e6e6e6' },
-  input: {
-    background: '#0f0f0f',
-    color: '#f2f2f2',
-    border: '1px solid #3a3a3a',
-    borderRadius: 10,
-    padding: '12px 14px',
-  },
-  radio: { display: 'inline-flex', alignItems: 'center', gap: 8, fontWeight: 600 },
-  err: { color: '#ffb4ab', fontSize: 13 },
-};
