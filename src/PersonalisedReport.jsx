@@ -734,19 +734,19 @@ const ConsciousKarmaPage = () => {
                     </div>
                   </div>
 
-                  <div className="ck-field-block ck-field-row-between">
-                    <div className="ck-inline-group">
-                      <div className="ck-label-right">Create account</div>
-                      <div className="ck-label">Email-id</div>
-                      <input
-                        className="ck-input"
-                        placeholder="abc@gmail.com"
-                        value={general.email}
-                        onChange={(e) =>
-                          handleGeneralChange("email", e.target.value)
-                        }
-                      />
+                  <div className="ck-field-block">
+                    <div className="ck-label">
+                      <span>Email-id</span>
+                      <span className="ck-label-right">Create account</span>
                     </div>
+                    <input
+                      className="ck-input"
+                      placeholder="abc@gmail.com"
+                      value={general.email}
+                      onChange={(e) =>
+                        handleGeneralChange("email", e.target.value)
+                      }
+                    />
                   </div>
 
                   <div className="ck-step-nav single-step-nav">
@@ -762,12 +762,12 @@ const ConsciousKarmaPage = () => {
                     Proceed
                   </button>
                 </div>
+              </div>
 
-                <div className="ck-delivery-text">
-                  Delivery within 5-7 days
-                  <br />
-                  Requires mobile number OTP verification
-                </div>
+              <div className="ck-delivery-text">
+                Delivery within 5-7 days
+                <br />
+                Requires mobile number OTP verification
               </div>
             </div>
 
@@ -879,12 +879,12 @@ const ConsciousKarmaPage = () => {
                     Proceed
                   </button>
                 </div>
+              </div>
 
-                <div className="ck-delivery-text">
-                  Delivery within 5-7 days
-                  <br />
-                  Requires mobile number OTP verification
-                </div>
+              <div className="ck-delivery-text">
+                Delivery within 5-7 days
+                <br />
+                Requires mobile number OTP verification
               </div>
             </div>
 
@@ -895,22 +895,23 @@ const ConsciousKarmaPage = () => {
                 <div className="ck-form-inner">
                   <div className="ck-form-heading">Parallel Number</div>
 
-                  {parallels.map((p, i) => {
-                    const isOpen = openParallelIndex === i;
-                    return (
-                      <div key={i} className="ck-parallel-block">
-                        <div className="ck-parallel-header">
-                          <div className="ck-label">
-                            Parallel Mobile Number #{i + 1}
-                          </div>
-                          <div className="ck-parallel-header-actions">
-                            <button
-                              type="button"
-                              className="ck-toggle-btn"
-                              onClick={() => toggleParallelOpen(i)}
-                            >
-                              {isOpen ? "−" : "+"}
-                            </button>
+                  <div className="ck-parallel-container">
+                    {parallels.map((p, i) => {
+                      const isOpen = openParallelIndex === i;
+                      return (
+                        <div key={i} className="ck-parallel-block">
+                          <div className="ck-parallel-header">
+                            <div className="ck-label">
+                              Parallel Mobile Number #{i + 1}
+                            </div>
+                            <div className="ck-parallel-header-actions">
+                              <button
+                                type="button"
+                                className="ck-toggle-btn"
+                                onClick={() => toggleParallelOpen(i)}
+                              >
+                                {isOpen ? "−" : "+"}
+                              </button>
                             <button
                               type="button"
                               className="ck-remove-btn"
@@ -1016,6 +1017,7 @@ const ConsciousKarmaPage = () => {
                       </div>
                     );
                   })}
+                  </div>
 
                   {parallels.length < MAX_PARALLEL_NUMBERS && (
                     <div className="ck-add-btn-wrap">
@@ -1046,12 +1048,12 @@ const ConsciousKarmaPage = () => {
                     Proceed
                   </button>
                 </div>
+              </div>
 
-                <div className="ck-delivery-text">
-                  Delivery within 5-7 days
-                  <br />
-                  Requires mobile number OTP verification
-                </div>
+              <div className="ck-delivery-text">
+                Delivery within 5-7 days
+                <br />
+                Requires mobile number OTP verification
               </div>
             </div>
 
@@ -1062,29 +1064,30 @@ const ConsciousKarmaPage = () => {
                 <div className="ck-form-inner">
                   <div className="ck-form-heading">Previous Number</div>
 
-                  {previousNumbers.map((p, i) => {
-                    const isOpen = openPreviousIndex === i;
-                    return (
-                      <div key={i} className="ck-parallel-block">
-                        <div className="ck-parallel-header">
-                          <div className="ck-label">
-                            Previous Mobile Number #{i + 1}
-                          </div>
-                          <div className="ck-parallel-header-actions">
-                            <button
-                              type="button"
-                              className="ck-toggle-btn"
-                              onClick={() => togglePreviousOpen(i)}
-                            >
-                              {isOpen ? "−" : "+"}
-                            </button>
-                            <button
-                              type="button"
-                              className="ck-remove-btn"
-                              onClick={() => removePrevious(i)}
-                            >
-                              Remove
-                            </button>
+                  <div className="ck-parallel-container">
+                    {previousNumbers.map((p, i) => {
+                      const isOpen = openPreviousIndex === i;
+                      return (
+                        <div key={i} className="ck-parallel-block">
+                          <div className="ck-parallel-header">
+                            <div className="ck-label">
+                              Previous Mobile Number #{i + 1}
+                            </div>
+                            <div className="ck-parallel-header-actions">
+                              <button
+                                type="button"
+                                className="ck-toggle-btn"
+                                onClick={() => togglePreviousOpen(i)}
+                              >
+                                {isOpen ? "−" : "+"}
+                              </button>
+                              <button
+                                type="button"
+                                className="ck-remove-btn"
+                                onClick={() => removePrevious(i)}
+                              >
+                                Remove
+                              </button>
                           </div>
                         </div>
 
@@ -1213,6 +1216,7 @@ const ConsciousKarmaPage = () => {
                       </div>
                     );
                   })}
+                  </div>
 
                   <div className="ck-add-btn-wrap">
                     <button
@@ -1241,12 +1245,12 @@ const ConsciousKarmaPage = () => {
                     Proceed
                   </button>
                 </div>
+              </div>
 
-                <div className="ck-delivery-text">
-                  Delivery within 5-7 days
-                  <br />
-                  Requires mobile number OTP verification
-                </div>
+              <div className="ck-delivery-text">
+                Delivery within 5-7 days
+                <br />
+                Requires mobile number OTP verification
               </div>
             </div>
 
@@ -1284,26 +1288,28 @@ const ConsciousKarmaPage = () => {
                   </div>
 
                   <div className="ck-field-block">
-                    <input
-                      className="ck-input"
-                      placeholder="Enter OTP"
-                      value={otpPrimary.code}
-                      onChange={(e) =>
-                        setOtpPrimary((o) => ({
-                          ...o,
-                          code: e.target.value,
-                        }))
-                      }
-                      disabled={otpPrimary.verified}
-                    />
-                    <button
-                      type="button"
-                      className="ck-pill"
-                      onClick={verifyOtpPrimary}
-                      disabled={otpPrimary.verified}
-                    >
-                      {otpPrimary.verified ? "Verified" : "Verify"}
-                    </button>
+                    <div className="ck-inline-inputs">
+                      <input
+                        className="ck-input-flex"
+                        placeholder="Enter OTP"
+                        value={otpPrimary.code}
+                        onChange={(e) =>
+                          setOtpPrimary((o) => ({
+                            ...o,
+                            code: e.target.value,
+                          }))
+                        }
+                        disabled={otpPrimary.verified}
+                      />
+                      <button
+                        type="button"
+                        className="ck-pill"
+                        onClick={verifyOtpPrimary}
+                        disabled={otpPrimary.verified}
+                      >
+                        {otpPrimary.verified ? "Verified" : "Verify"}
+                      </button>
+                    </div>
                   </div>
 
                   {/* Parallels */}
@@ -1316,55 +1322,59 @@ const ConsciousKarmaPage = () => {
                         cooldown: 0,
                       };
                     return (
-                      <div key={i} className="ck-field-block">
-                        <div className="ck-label">
-                          Parallel Number #{i + 1}
-                        </div>
-                        <div className="ck-inline-inputs">
-                          <div className="ck-input-flex readonly-input">
-                            {p.isd} {p.number}
+                      <div key={i}>
+                        <div className="ck-field-block">
+                          <div className="ck-label">
+                            Parallel Number #{i + 1}
                           </div>
-                          <button
-                            type="button"
-                            className="ck-pill"
-                            onClick={() => sendOtpParallel(i)}
-                            disabled={
-                              status.verified || status.cooldown > 0
-                            }
-                          >
-                            {status.verified
-                              ? "Verified"
-                              : status.sent
-                              ? status.cooldown > 0
-                                ? `Resend in ${status.cooldown}s`
-                                : "Resend OTP"
-                              : "Send OTP"}
-                          </button>
+                          <div className="ck-inline-inputs">
+                            <div className="ck-input-flex readonly-input">
+                              {p.isd} {p.number}
+                            </div>
+                            <button
+                              type="button"
+                              className="ck-pill"
+                              onClick={() => sendOtpParallel(i)}
+                              disabled={
+                                status.verified || status.cooldown > 0
+                              }
+                            >
+                              {status.verified
+                                ? "Verified"
+                                : status.sent
+                                ? status.cooldown > 0
+                                  ? `Resend in ${status.cooldown}s`
+                                  : "Resend OTP"
+                                : "Send OTP"}
+                            </button>
+                          </div>
                         </div>
-                        <div className="ck-inline-inputs">
-                          <input
-                            className="ck-input"
-                            placeholder="Enter OTP"
-                            value={status.code || ""}
-                            onChange={(e) =>
-                              setOtpParallels((list) =>
-                                list.map((x, idx) =>
-                                  idx === i
-                                    ? { ...x, code: e.target.value }
-                                    : x
+                        <div className="ck-field-block">
+                          <div className="ck-inline-inputs">
+                            <input
+                              className="ck-input-flex"
+                              placeholder="Enter OTP"
+                              value={status.code || ""}
+                              onChange={(e) =>
+                                setOtpParallels((list) =>
+                                  list.map((x, idx) =>
+                                    idx === i
+                                      ? { ...x, code: e.target.value }
+                                      : x
+                                  )
                                 )
-                              )
-                            }
-                            disabled={status.verified}
-                          />
-                          <button
-                            type="button"
-                            className="ck-pill"
-                            onClick={() => verifyOtpParallel(i)}
-                            disabled={status.verified}
-                          >
-                            {status.verified ? "Verified" : "Verify"}
-                          </button>
+                              }
+                              disabled={status.verified}
+                            />
+                            <button
+                              type="button"
+                              className="ck-pill"
+                              onClick={() => verifyOtpParallel(i)}
+                              disabled={status.verified}
+                            >
+                              {status.verified ? "Verified" : "Verify"}
+                            </button>
+                          </div>
                         </div>
                       </div>
                     );
@@ -1390,12 +1400,12 @@ const ConsciousKarmaPage = () => {
                     Proceed
                   </button>
                 </div>
+              </div>
 
-                <div className="ck-delivery-text">
-                  Delivery within 3–5 days
-                  <br />
-                  Requires OTP verification &amp; payment completion
-                </div>
+              <div className="ck-delivery-text">
+                Delivery within 3–5 days
+                <br />
+                Requires OTP verification &amp; payment completion
               </div>
             </div>
           </div>
