@@ -461,16 +461,11 @@ const ConsciousKarmaPage = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: general.name,
-          email: general.email,
-          phone: `${primary.isd}${primary.number}`,
+          general,
+          primary,
+          parallels,
+          previousNumbers,
           price: totalPrice,
-          form: {
-            general,
-            primary,
-            parallels,
-            previousNumbers,
-          },
         }),
       });
       const createData = await createRes.json();
