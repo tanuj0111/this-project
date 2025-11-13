@@ -1213,7 +1213,7 @@ export default function ConsciousKarmaSections() {
           <div className="absolute top-0 left-0 right-0 flex items-center justify-between py-3 sm:py-4 z-20 px-3 sm:px-6 lg:px-8">
             <a href="/" className="block" aria-label="conscious KARMA home">
               <img
-                src="/orignal_logo.svg"
+                src="/ck-logo.svg"
                 alt="conscious KARMA"
                 className="h-[40px] sm:h-[52px] md:h-[60px] lg:h-[70px] w-auto select-none"
                 draggable={false}
