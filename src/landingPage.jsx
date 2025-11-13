@@ -1631,7 +1631,7 @@ export default function ConsciousKarmaSections() {
       </section>
 
       {/* Global Footer (sticks to page bottom, full width, with orange border around) */}
-      <footer className="mt-auto w-full bg-black text-white border-2 border-orange-400 py-2 sm:py-2 md:py-3">
+      <footer className="mt-auto w-screen relative left-1/2 -translate-x-1/2 bg-black text-white border-2 border-orange-400 py-2 sm:py-2 md:py-3">
         <div className="container mx-auto px-4 sm:px-6 flex flex-col lg:flex-row gap-2 sm:gap-3 md:gap-4 items-center justify-between text-center lg:text-left">
           <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center lg:justify-start">
             <a
