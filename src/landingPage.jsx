@@ -1192,7 +1192,7 @@ export default function ConsciousKarmaSections() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-gray-50 font-arsenal overflow-x-hidden px-4 sm:px-6 md:px-8 lg:px-12 py-4 sm:py-6 md:py-8 lg:py-12">
+    <div className="min-h-screen flex flex-col bg-black text-gray-50 font-arsenal overflow-x-hidden px-4 sm:px-6 md:px-8 lg:px-12 pt-4 sm:pt-6 md:pt-8 lg:pt-12 pb-0">
       {/* Animated rotating border button styles (applies to all CTA buttons) */}
       <style>{`
         .rotating-border-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;background:#000;color:#fff;border:2px solid #ff8a3d;border-radius:9999px;overflow:hidden}
@@ -1246,15 +1246,15 @@ export default function ConsciousKarmaSections() {
             {/* LEFT — Hero Heading */}
             <div className="flex flex-col justify-center lg:justify-end h-full">
               <div className="flex flex-col items-center sm:items-start justify-center lg:justify-end">
-                <h1 className="font-balgin mb-8 sm:mb-12 md:mb-16 lg:mb-[90px] font-extralight uppercase text-[24px] sm:text-[32px] md:text-[42px] lg:text-[54px] leading-[1.1] sm:leading-[1.02] tracking-[0.02em] text-center sm:text-left w-full">
+                <h1 className="font-balgin mb-8 sm:mb-12 md:mb-16 lg:mb-[90px] font-extralight uppercase text-[24px] sm:text-[32px] md:text-[42px] lg:text-[54px] leading-[1.1] sm:leading-[1.02] tracking-[0.02em] text-center sm:text-left w-full sm:-ml-4 md:-ml-8 lg:-ml-12 xl:-ml-16 2xl:-ml-20">
                   <span className="block mb-1 sm:mb-2">YOUR MOBILE NUMBER</span>
-                  <span className="block mb-1 sm:mb-2 text-center">
+                  <span className="block mb-1 sm:mb-2 text-center sm:text-left">
                     IS THE <span className="text-orange-400">KEY</span>
                   </span>
                   <span className="block mb-1 sm:mb-2 text-center sm:text-left">
                     <span className="text-orange-400">TO</span> ACHIEVING YOUR
                   </span>
-                  <span className="block text-center mb-1 sm:mb-2">
+                  <span className="block mb-1 sm:mb-2 text-center sm:text-left">
                     <span className="text-orange-400">DREAMS</span>
                   </span>
                 </h1>
@@ -1424,7 +1424,7 @@ export default function ConsciousKarmaSections() {
             <img
               src={mobileEnergyFlow}
               alt="Mobile energy flow diagram"
-              className="w-[280px] sm:w-[400px] md:w-[510px] lg:w-[600px] xl:w-[780px] max-w-[46vw] mx-auto rounded-[14px] object-contain"
+              className="w-[280px] sm:w-[400px] md:w-[510px] lg:w-[600px] xl:w-[780px] max-w-[40vw] mx-auto rounded-[14px] object-contain"
             />
           </div>
         </div>
@@ -1628,41 +1628,42 @@ export default function ConsciousKarmaSections() {
           </div>
         </div>
 
-        {/* 🔹 Footer */}
-  <footer className="w-full bg-black text-white border-t border-gray-700 py-2 sm:py-2 md:py-3">
-          <div className="container mx-auto px-4 sm:px-6 flex flex-col lg:flex-row gap-2 sm:gap-3 md:gap-4 items-center justify-between text-center lg:text-left">
-            <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center lg:justify-start">
-              <a
-                href="/termsandconditions"
-                className="text-white underline font-bold text-xs sm:text-sm hover:text-gray-300 transition-colors"
-              >
-                Terms & Conditions
-              </a>
-              <a
-                href="/privacy-policy"
-                className="text-white underline font-bold text-xs sm:text-sm hover:text-gray-300 transition-colors"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="/refund-policy"
-                className="text-white underline font-bold text-xs sm:text-sm hover:text-gray-300 transition-colors"
-              >
-                Refund Policy
-              </a>
-              <a
-                href="/shipping-policy"
-                className="text-white underline font-bold text-xs sm:text-sm hover:text-gray-300 transition-colors"
-              >
-                Shipping & Delivery
-              </a>
-            </div>
-            <div className="text-white font-bold text-xs sm:text-sm break-all sm:break-normal">
-              Contact Us – suma@consciouskarma.co
-            </div>
-          </div>
-        </footer>
       </section>
+
+      {/* Global Footer (sticks to page bottom, full width, with orange border around) */}
+      <footer className="mt-auto w-full bg-black text-white border-2 border-orange-400 py-2 sm:py-2 md:py-3">
+        <div className="container mx-auto px-4 sm:px-6 flex flex-col lg:flex-row gap-2 sm:gap-3 md:gap-4 items-center justify-between text-center lg:text-left">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center lg:justify-start">
+            <a
+              href="/termsandconditions"
+              className="text-white underline font-bold text-xs sm:text-sm hover:text-gray-300 transition-colors"
+            >
+              Terms & Conditions
+            </a>
+            <a
+              href="/privacy-policy"
+              className="text-white underline font-bold text-xs sm:text-sm hover:text-gray-300 transition-colors"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="/refund-policy"
+              className="text-white underline font-bold text-xs sm:text-sm hover:text-gray-300 transition-colors"
+            >
+              Refund Policy
+            </a>
+            <a
+              href="/shipping-policy"
+              className="text-white underline font-bold text-xs sm:text-sm hover:text-gray-300 transition-colors"
+            >
+              Shipping & Delivery
+            </a>
+          </div>
+          <div className="text-white font-bold text-xs sm:text-sm break-all sm:break-normal">
+            Contact Us – suma@consciouskarma.co
+          </div>
+        </div>
+      </footer>
 
 
       {/* MODAL */}
