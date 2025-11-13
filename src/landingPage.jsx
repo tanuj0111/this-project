@@ -1194,18 +1194,18 @@ export default function ConsciousKarmaSections() {
   return (
     <div className="min-h-screen flex flex-col bg-black text-gray-50 font-arsenal overflow-x-hidden px-4 sm:px-6 md:px-8 lg:px-12 pt-4 sm:pt-6 md:pt-8 lg:pt-12 pb-0">
       {/* Animated rotating border button styles (applies to all CTA buttons) */}
-      <style>{`
+  <style>{`
   .rotating-border-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;background:#000;color:#fff;border:2px solid #ff8a3d;border-radius:10px;overflow:hidden}
-        .rotating-border-btn::before{content:"";position:absolute;inset:-2px;padding:2px;border-radius:inherit;background:conic-gradient(from 0deg, rgba(255,138,61,0.95), rgba(255,138,61,0.2) 18%, transparent 30%, transparent 70%, rgba(255,138,61,0.2) 82%, rgba(255,138,61,0.95));-webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:ckSpin 3.2s linear infinite;pointer-events:none}
-        @keyframes ckSpin{to{transform:rotate(360deg)}}
-        .rotating-border-btn:focus{outline:none;box-shadow:0 0 0 3px rgba(255,138,61,.25)}
+    .rotating-border-btn::before{content:"";position:absolute;inset:-2px;padding:2px;border-radius:inherit;background:conic-gradient(from 0deg, rgba(255,138,61,0.95), rgba(255,138,61,0.2) 18%, transparent 30%, transparent 70%, rgba(255,138,61,0.2) 82%, rgba(255,138,61,0.95));-webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:ckSpin 3.2s linear infinite;pointer-events:none}
+    @keyframes ckSpin{to{transform:rotate(360deg)}}
+    .rotating-border-btn:focus{outline:none;box-shadow:0 0 0 3px rgba(255,138,61,.25)}
 
-        /* Fluid type helpers for consistent responsive text sizing */
-        .text-fluid-16-20{font-size:clamp(16px,3.8vw,20px)}
-        .text-fluid-18-24{font-size:clamp(18px,3.6vw,24px)}
-        .text-fluid-18-30{font-size:clamp(18px,4vw,30px)}
-        .text-fluid-24-30{font-size:clamp(24px,3.2vw,30px)}
-      `}</style>
+    /* Fluid type helpers for consistent responsive text sizing (smaller mins for phones) */
+    .text-fluid-16-20{font-size:clamp(14px,3.8vw,20px)}
+    .text-fluid-18-24{font-size:clamp(16px,3.6vw,22px)}
+    .text-fluid-18-30{font-size:clamp(16px,4vw,28px)}
+    .text-fluid-24-30{font-size:clamp(22px,3.2vw,30px)}
+  `}</style>
       {/* HERO */}
       <section className="relative min-h-screen bg-black flex flex-col pt-12 sm:pt-16 md:pt-4 lg:pt-18">
         <div className="container mx-auto px-4 sm:px-6 flex-1 flex flex-col justify-center">
