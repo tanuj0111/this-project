@@ -1199,6 +1199,12 @@ export default function ConsciousKarmaSections() {
         .rotating-border-btn::before{content:"";position:absolute;inset:-2px;padding:2px;border-radius:inherit;background:conic-gradient(from 0deg, rgba(255,138,61,0.95), rgba(255,138,61,0.2) 18%, transparent 30%, transparent 70%, rgba(255,138,61,0.2) 82%, rgba(255,138,61,0.95));-webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:ckSpin 3.2s linear infinite;pointer-events:none}
         @keyframes ckSpin{to{transform:rotate(360deg)}}
         .rotating-border-btn:focus{outline:none;box-shadow:0 0 0 3px rgba(255,138,61,.25)}
+
+        /* Fluid type helpers for consistent responsive text sizing */
+        .text-fluid-16-20{font-size:clamp(16px,3.8vw,20px)}
+        .text-fluid-18-24{font-size:clamp(18px,3.6vw,24px)}
+        .text-fluid-18-30{font-size:clamp(18px,4vw,30px)}
+        .text-fluid-24-30{font-size:clamp(24px,3.2vw,30px)}
       `}</style>
       {/* HERO */}
       <section className="relative min-h-screen bg-black flex flex-col pt-12 sm:pt-16 md:pt-4 lg:pt-18">
@@ -1401,13 +1407,13 @@ export default function ConsciousKarmaSections() {
       <section className="relative min-h-screen bg-black flex flex-col items-center justify-center py-12 sm:py-16 md:py-20 lg:py-[72px] px-4 sm:px-6">
         <div className="container mx-auto text-center">
           {/* Top Text (forced line breaks to match mock) */}
-          <p className="text-center text-[#eaeaea] font-arsenal text-[16px] sm:text-[18px] md:text-[19px] lg:text-[20px] leading-[1.6] mb-6 sm:mb-8 md:mb-10 lg:mb-[40px] max-w-[90%] sm:max-w-[640px] mx-auto">
+          <p className="text-center text-[#eaeaea] font-arsenal text-fluid-16-20 leading-[1.6] mb-6 sm:mb-8 md:mb-10 lg:mb-[40px] max-w-[90%] sm:max-w-[640px] mx-auto">
             <span className="block">Every mobile number is a unique sequence, each</span>
             <span className="block">carrying distinct energy</span>
           </p>
 
           {/* Middle Text (forced line breaks to match mock) */}
-          <p className="text-center text-gray-200 font-arsenal text-[16px] sm:text-[18px] md:text-[19px] lg:text-[20px] leading-[1.6] mb-8 sm:mb-10 md:mb-12 lg:mb-[60px] max-w-[90%] sm:max-w-[700px] mx-auto">
+          <p className="text-center text-gray-200 font-arsenal text-fluid-16-20 leading-[1.6] mb-8 sm:mb-10 md:mb-12 lg:mb-[60px] max-w-[90%] sm:max-w-[700px] mx-auto">
             <span className="block">The interaction and position of its digits form a</span>
             <span className="block">pattern of vibrations, shaping actions, behaviour, and</span>
             <span className="block">the flow of life</span>
@@ -1432,16 +1438,16 @@ export default function ConsciousKarmaSections() {
         <div className="container mx-auto">
           {/* Text block */}
           <div className="space-y-2 sm:space-y-3 md:space-y-4">
-            <p className="text-gray-200 font-thin text-[24px] sm:text-[26px] md:text-[28px] lg:text-[30px] leading-[1.22]">
+            <p className="text-gray-200 font-thin text-fluid-24-30 leading-[1.22]">
               Your DATE of BIRTH can be <span className="text-[#d87d3d]">shared</span>.
             </p>
-            <p className="text-gray-200 font-thin text-[24px] sm:text-[26px] md:text-[28px] lg:text-[30px] leading-[1.22]">
+            <p className="text-gray-200 font-thin text-fluid-24-30 leading-[1.22]">
               Your NAME can be <span className="text-[#d87d3d]">repeated</span>.
             </p>
-            <p className="text-gray-200 font-thin text-[24px] sm:text-[26px] md:text-[28px] lg:text-[30px] leading-[1.22]">
+            <p className="text-gray-200 font-thin text-fluid-24-30 leading-[1.22]">
               Your MOBILE NUMBER
             </p>
-            <p className="text-gray-200 font-thin text-[24px] sm:text-[26px] md:text-[28px] lg:text-[30px] leading-[1.22]">
+            <p className="text-gray-200 font-thin text-fluid-24-30 leading-[1.22]">
               is <span className="text-[#d87d3d]">DISTINCTLY YOURS</span>.
             </p>
           </div>
@@ -1466,7 +1472,7 @@ export default function ConsciousKarmaSections() {
       {/* WOVEN */}
       <section className="relative bg-black flex flex-col items-center justify-center py-12 sm:py-14 md:py-16 px-4 sm:px-6 text-center">
         {/* Text */}
-        <p className="max-w-[90%] sm:max-w-[560px] mx-auto text-gray-200 text-[16px] sm:text-[18px] md:text-[19px] lg:text-[20px] leading-relaxed font-thin text-center">
+        <p className="max-w-[90%] sm:max-w-[560px] mx-auto text-gray-200 text-fluid-16-20 leading-relaxed font-thin text-center">
           <span className="block">Just as numbers are woven into the fabric of</span>
           <span className="block"> the universe, your mobile number is intricately</span>
           <span className="block">woven into your life. It guides your journey,</span>
@@ -1488,21 +1494,21 @@ export default function ConsciousKarmaSections() {
       <section className="relative min-h-screen bg-black flex flex-col items-center justify-center text-center py-12 sm:py-16 md:py-20 lg:py-[72px] px-4 sm:px-6">
         <div className="container mx-auto max-w-[90%] sm:max-w-[680px]">
           {/* Text block */}
-          <p className="text-gray-200 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-relaxed font-light mb-6 sm:mb-8 md:mb-10 lg:mb-[40px]">
+          <p className="text-gray-200 text-fluid-18-24 leading-relaxed font-light mb-6 sm:mb-8 md:mb-10 lg:mb-[40px]">
             <span className="block">
               A mobile number is a <span className="text-[#d87d3d]">DIGITAL AGE YANTRA</span>
             </span>
             <span className="block">a tool threaded with different forms of energy.</span>
           </p>
 
-          <p className="text-gray-200 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-relaxed font-light mb-6 sm:mb-7 md:mb-8 lg:mb-[32px]">
+          <p className="text-gray-200 text-fluid-18-24 leading-relaxed font-light mb-6 sm:mb-7 md:mb-8 lg:mb-[32px]">
             <span className="block">Consciously crafted,</span>
             <span className="block">it holds the power to ease a journey,</span>
             <span className="block">shape a path, and</span>
             <span className="block">open new opportunities.</span>
           </p>
 
-          <p className="text-gray-200 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-relaxed font-light mb-8 sm:mb-10 md:mb-12 lg:mb-[48px]">
+          <p className="text-gray-200 text-fluid-18-24 leading-relaxed font-light mb-8 sm:mb-10 md:mb-12 lg:mb-[48px]">
             <span className="block">Your mobile number is not just utility.</span>
             <span className="block">it is your greatest asset -</span>
             <span className="block">the code of your journey.</span>
@@ -1590,8 +1596,9 @@ export default function ConsciousKarmaSections() {
   <section className="relative min-h-screen bg-black flex flex-col items-center justify-center py-10 sm:py-12 md:py-[45px] px-4 sm:px-6">
         <div className="container mx-auto flex flex-col items-center text-center space-y-6 sm:space-y-7 md:space-y-8 mb-8 sm:mb-12">
           {/* 🔹 Heading */}
-          <p className="font-thin text-white text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] leading-relaxed max-w-[90%] sm:max-w-[620px] mx-auto">
-            Is Your Mobile Number Enhancing Your Journey or Holding You Back?
+          <p className="font-thin text-white text-fluid-18-30 leading-relaxed max-w-[90%] sm:max-w-[620px] mx-auto">
+            <span className="block">Is Your Mobile Number Enhancing Your</span>
+            <span className="block">Journey or Holding You Back?</span>
           </p>
 
           {/* 🔹 Icon Row */}
