@@ -1207,15 +1207,15 @@ export default function ConsciousKarmaSections() {
         .text-fluid-24-30{font-size:clamp(24px,3.2vw,30px)}
       `}</style>
       {/* HERO */}
-      <section className="relative min-h-screen bg-black flex flex-col pt-12 sm:pt-16 md:pt-4 lg:pt-18">
+      <section className="relative min-h-screen bg-black flex flex-col pt-2 sm:pt-6 md:pt-4 lg:pt-18">
         <div className="container mx-auto px-4 sm:px-6 flex-1 flex flex-col justify-center">
           {/* 🔹 Header (Brand + Hamburger) */}
-          <div className=" top-0 left-0 right-0 flex  justify-between py-3 sm:py-4 z-20 px-3 sm:px-6 lg:px-8">
+          <div className="absolute top-0 left-0 right-0 flex items-center justify-between py-2 sm:py-3 z-20 px-3 sm:px-6 lg:px-8 pt-[env(safe-area-inset-top)]">
             <a href="/" className="block" aria-label="conscious KARMA home">
               <img
                 src="/Logomy.svg"
                 alt="conscious KARMA"
-                style={{ height: '200px', marginTop: '-80px' }}
+                className="h-[36px] sm:h-[48px] md:h-[56px] lg:h-[64px] w-auto object-contain select-none"
                 draggable={false}
               />
             </a>
@@ -1228,7 +1228,7 @@ export default function ConsciousKarmaSections() {
               {[0, 1, 2].map((i) => (
                 <span
                   key={i}
-                  className={`block w-[28px] sm:w-[45px] h-[2.5px] sm:h-[3px] bg-white rounded-[2px] transition-all duration-300 ${menuOpen
+                  className={`block w-[28px] sm:w-[30isskapx] h-[2.5px] sm:h-[3px] bg-slate-300 rounded-[2px] transition-all duration-300 ${menuOpen
                     ? i === 0
                       ? "rotate-45 translate-y-[8px] sm:translate-y-[10px]"
                       : i === 1
@@ -1276,7 +1276,7 @@ export default function ConsciousKarmaSections() {
               {/* Icon + Label Grid */}
               <div className="flex justify-center items-center mt-[-10px] sm:mt-[-20px]">
                 {/* Fixed icon column + consistent gaps for perfectly equal spacing */}
-                <div className="grid grid-cols-[36px_1fr] sm:grid-cols-[44px_1fr] md:grid-cols-[56px_1fr] items-center gap-x-4 sm:gap-x-6 md:gap-x-8 gap-y-3 sm:gap-y-4 md:gap-y-5 text-[16px] sm:text-[18px] md:text-[20px] w-[240px] sm:w-[260px] md:w-[280px]">
+                <div className="grid grid-cols-[36px_1fr] sm:grid-cols-[44px_1fr] md:grid-cols-[56px_1fr] items-center gap-x-2 sm:gap-x-3 md:gap-x-4 gap-y-1 sm:gap-y-2 md:gap-y-3 text-[16px] sm:text-[18px] md:text-[20px] w-[240px] sm:w-[260px] md:w-[280px]">
                   {[
                     [financeImg, "Finance & Work"],
                     [fortuneImg, "Fortune"],
@@ -1329,6 +1329,7 @@ export default function ConsciousKarmaSections() {
             ["Personalised Report", "/personalised-report"],
             ["Consult", "/consult"],
             ["Blog", "#blogs"],
+            
           ].map(([label, link], i) => (
             <a
               key={i}
@@ -1375,11 +1376,11 @@ export default function ConsciousKarmaSections() {
                 <img
                   src={zeroPng}
                   alt="Zero symbol"
-                  className="w-full h-full object-cover scale-[1.02]"
+                  className="w-full h-85 mr-6  object-cover scale-[1.02]"
                 />
               </div>
               <p className="m-0 leading-[1.7] text-[16px] sm:text-[17px] md:text-[18px] text-[#eaeaea] w-full px-2 sm:px-0">
-                Sages used numbers as symbols for celestial influence, capturing the &nbsp; &nbsp;&nbsp; essence of cosmic energies with &nbsp;&nbsp; simplicity and precision
+                Sages used numbers as symbols for celestial influence, capturing the  <br/> essence of cosmic energies with<br/>simplicity and precision
               </p>
             </div>
 
@@ -1389,11 +1390,11 @@ export default function ConsciousKarmaSections() {
                 <img
                   src={karmaTransparent}
                   alt="Karma symbol"
-                  className="w-full h-85 object-contain scale-[1.5]"
+                  className="w-80 h-81 mr-8 object-contain scale-[1.5]"
                 />
               </div>
               <p className="m-0 leading-relaxed text-[16px] sm:text-[17px] md:text-[18px] text-thin w-full px-2 sm:px-0">
-                Our choices and the energies we &nbsp;&nbsp; embrace shape destiny, creating the &nbsp;&nbsp;&nbsp;path we walk and the reality we &nbsp;&nbsp;&nbsp;manifest
+                Our choices and the energies we<br/> embrace shape destiny, creating the<br/>path we walk and the reality we <br/>manifest
               </p>
             </div>
           </div>
@@ -1424,7 +1425,7 @@ export default function ConsciousKarmaSections() {
             <img
               src={mobileEnergyFlow}
               alt="Mobile energy flow diagram"
-              className="w-[280px] sm:w-[400px] md:w-[510px] lg:w-[600px] xl:w-[780px] max-w-[40vw] mx-auto rounded-[14px] object-contain"
+              className="w-[280px] mr-8 sm:w-[400px] md:w-[510px] lg:w-[600px] xl:w-[780px] max-w-[40vw] mx-auto rounded-[14px] object-contain"
             />
           </div>
         </div>
@@ -1456,7 +1457,7 @@ export default function ConsciousKarmaSections() {
           <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-[170px]">
             <a
               href="/get-report"
-              className="text-[#d87d3d] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-relaxed font-light hover:opacity-80 transition-opacity"
+              className="text-[#d87d3d] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-relaxed font-light hover:opacity-80 transition-opacity no-underline hover:no-underline focus:no-underline"
             >
               Get personalised report &gt;&gt;&gt;
             </a>
@@ -1494,21 +1495,21 @@ export default function ConsciousKarmaSections() {
       <section className="relative min-h-screen bg-black flex flex-col items-center justify-center text-center py-12 sm:py-16 md:py-20 lg:py-[72px] px-4 sm:px-6">
         <div className="container mx-auto max-w-[90%] sm:max-w-[680px]">
           {/* Text block */}
-          <p className="text-gray-200 text-fluid-18-24 leading-relaxed font-light mb-6 sm:mb-8 md:mb-10 lg:mb-[40px]">
+          <p className="text-gray-200 text-fluid-18-24 leading-relaxed lg:text-[22px] font-light mb-6 sm:mb-8 md:mb-10 lg:mb-[40px]">
             <span className="block">
               A mobile number is a <span className="text-[#d87d3d]">DIGITAL AGE YANTRA</span>
             </span>
             <span className="block">a tool threaded with different forms of energy.</span>
           </p>
 
-          <p className="text-gray-200 text-fluid-18-24 leading-relaxed font-light mb-6 sm:mb-7 md:mb-8 lg:mb-[32px]">
+          <p className="text-gray-200 text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] leading-relaxed font-light mb-6 sm:mb-7 md:mb-8 lg:mb-[32px]">
             <span className="block">Consciously crafted,</span>
             <span className="block">it holds the power to ease a journey,</span>
             <span className="block">shape a path, and</span>
             <span className="block">open new opportunities.</span>
           </p>
 
-          <p className="text-gray-200 text-fluid-18-24 leading-relaxed font-light mb-8 sm:mb-10 md:mb-12 lg:mb-[48px]">
+          <p className="text-gray-200 text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] leading-relaxed font-light mb-8 sm:mb-10 md:mb-12 lg:mb-[48px]">
             <span className="block">Your mobile number is not just utility.</span>
             <span className="block">it is your greatest asset -</span>
             <span className="block">the code of your journey.</span>
@@ -1517,7 +1518,7 @@ export default function ConsciousKarmaSections() {
           {/* CTA */}
           <a
             href="/consult"
-            className="text-[#d87d3d] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-relaxed font-light hover:opacity-80 transition-opacity"
+            className="text-[#d87d3d] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] leading-relaxed font-light hover:opacity-80 transition-opacity no-underline hover:no-underline focus:no-underline"
           >
             Invest in your greatest asset &gt;&gt;&gt;
           </a>
@@ -1620,7 +1621,7 @@ export default function ConsciousKarmaSections() {
           </div>
 
           {/* 🔹 Form Section */}
-          <div className="w-full max-w-[360px] mt-2 sm:mt-[8px] flex flex-col items-center">
+          <div className="w-full max-w-[360px] mt-10 sm:mt-[8px] flex flex-col items-center">
             <InlineInstantReportForm
               ctaLabel="Get Report"
               onSubmit={openPrefilledModal}
@@ -1631,9 +1632,9 @@ export default function ConsciousKarmaSections() {
       </section>
 
       {/* Global Footer (sticks to page bottom, full width, with orange border around) */}
-      <footer className="mt-auto w-screen relative left-1/2 -translate-x-1/2 bg-black text-white border-2 border-orange-400 py-2 sm:py-2 md:py-3">
-        <div className="container mx-auto px-4 sm:px-6 flex flex-col lg:flex-row gap-2 sm:gap-3 md:gap-4 items-center justify-between text-center lg:text-left">
-          <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center lg:justify-start">
+      <footer className="mt-auto w-screen relative left-1/2 -translate-x-1/2 bg-black text-white border-t-2 border-orange-400 py-2 sm:py-2 md:py-3">
+        <div className="container mx-auto px-4 sm:px-6 flex flex-col items-center justify-center text-center gap-3 sm:gap-4 md:gap-5">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-5">
             <a
               href="/termsandconditions"
               className="text-white underline font-bold text-xs sm:text-sm hover:text-gray-300 transition-colors"
@@ -1658,10 +1659,16 @@ export default function ConsciousKarmaSections() {
             >
               Shipping & Delivery
             </a>
+            <a
+              href="/contact-us"
+              className="text-white underline font-bold text-xs sm:text-sm hover:text-gray-300 transition-colors"
+            >
+              Contact Us
+            </a>
           </div>
-          <div className="text-white font-bold text-xs sm:text-sm break-all sm:break-normal">
-            Contact Us – suma@consciouskarma.co
-          </div>
+          {/* <div className="text-white font-bold text-xs sm:text-sm break-all sm:break-normal">
+            <a href="mailto:hello@consciouskarma.co" className="underline">hello@consciouskarma.co</a>
+          </div> */}
         </div>
       </footer>
 
@@ -1763,7 +1770,7 @@ function InlineInstantReportForm({
       </div>
 
       <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3 justify-center w-full">
-        <span className="px-3 py-2.5 sm:py-3 text-white text-[17px] sm:text-xl font-arsenal font-bold rounded-md w-full sm:w-[90px] flex items-center justify-center">
+        <span className="px-3 py-2.5 sm:py-3 text-white text-[17px] sm:text-xl font-arsenal rounded-md w-full sm:w-[90px] flex items-center justify-center">
           ₹ 269
         </span>
         <button

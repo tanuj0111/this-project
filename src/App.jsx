@@ -11,6 +11,7 @@ import TermsAndConditions from './TermsAndConditions.jsx';
 import PrivacyPolicy from './PrivacyPolicy.jsx';
 import RefundPolicy from './RefundPolicy.jsx';
 import ShippingPolicy from './ShippingPolicy.jsx';
+import ContactUs from './ContactUs.jsx';
 
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/refund-policy" element={<RefundPolicy />} />
         <Route path="/shipping-policy" element={<ShippingPolicy />} />
+        <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
    
     </BrowserRouter>
