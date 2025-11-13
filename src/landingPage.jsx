@@ -1195,7 +1195,7 @@ export default function ConsciousKarmaSections() {
     <div className="min-h-screen flex flex-col bg-black text-gray-50 font-arsenal overflow-x-hidden px-4 sm:px-6 md:px-8 lg:px-12 pt-4 sm:pt-6 md:pt-8 lg:pt-12 pb-0">
       {/* Animated rotating border button styles (applies to all CTA buttons) */}
       <style>{`
-        .rotating-border-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;background:#000;color:#fff;border:2px solid #ff8a3d;border-radius:9999px;overflow:hidden}
+  .rotating-border-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;background:#000;color:#fff;border:2px solid #ff8a3d;border-radius:10px;overflow:hidden}
         .rotating-border-btn::before{content:"";position:absolute;inset:-2px;padding:2px;border-radius:inherit;background:conic-gradient(from 0deg, rgba(255,138,61,0.95), rgba(255,138,61,0.2) 18%, transparent 30%, transparent 70%, rgba(255,138,61,0.2) 82%, rgba(255,138,61,0.95));-webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:ckSpin 3.2s linear infinite;pointer-events:none}
         @keyframes ckSpin{to{transform:rotate(360deg)}}
         .rotating-border-btn:focus{outline:none;box-shadow:0 0 0 3px rgba(255,138,61,.25)}
@@ -1229,12 +1229,12 @@ export default function ConsciousKarmaSections() {
                 <span
                   key={i}
                   className={`block w-[28px] sm:w-[45px] h-[2.5px] sm:h-[3px] bg-white rounded-[2px] transition-all duration-300 ${menuOpen
-                      ? i === 0
-                        ? "rotate-45 translate-y-[8px] sm:translate-y-[10px]"
-                        : i === 1
-                          ? "opacity-0"
-                          : "-rotate-45 -translate-y-[8px] sm:-translate-y-[10px]"
-                      : ""
+                    ? i === 0
+                      ? "rotate-45 translate-y-[8px] sm:translate-y-[10px]"
+                      : i === 1
+                        ? "opacity-0"
+                        : "-rotate-45 -translate-y-[8px] sm:-translate-y-[10px]"
+                    : ""
                     }`}
                 />
               ))}
@@ -1246,7 +1246,7 @@ export default function ConsciousKarmaSections() {
             {/* LEFT — Hero Heading */}
             <div className="flex flex-col justify-center lg:justify-end h-full">
               <div className="flex flex-col items-center sm:items-start justify-center lg:justify-end">
-                <h1 className="font-balgin mb-8 sm:mb-12 md:mb-16 lg:mb-[90px] font-extralight uppercase text-[24px] sm:text-[32px] md:text-[42px] lg:text-[54px] leading-[1.1] sm:leading-[1.02] tracking-[0.02em] text-center sm:text-left w-full sm:-ml-4 md:-ml-8 lg:-ml-12 xl:-ml-16 2xl:-ml-20">
+                <h1 className="font-balgin mb-8 sm:mb-12 md:mb-16 lg:mb-[90px] font-extralight uppercase text-[24px] sm:text-[32px] md:text-[42px] lg:text-[54px] leading-[1.1] sm:leading-[1.02] tracking-[0.02em] text-center sm:text-left w-full transform sm:-translate-x-2 md:-translate-x-6 lg:-translate-x-10 xl:-translate-x-14 2xl:-translate-x-16 sm:-translate-y-1 md:-translate-y-2 lg:-translate-y-3">
                   <span className="block mb-1 sm:mb-2">YOUR MOBILE NUMBER</span>
                   <span className="block mb-1 sm:mb-2 text-center sm:text-left">
                     IS THE <span className="text-orange-400">KEY</span>
@@ -1456,7 +1456,7 @@ export default function ConsciousKarmaSections() {
           <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-[170px]">
             <a
               href="/get-report"
-            className="text-[#d87d3d] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-relaxed font-light hover:opacity-80 transition-opacity"
+              className="text-[#d87d3d] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-relaxed font-light hover:opacity-80 transition-opacity"
             >
               Get personalised report &gt;&gt;&gt;
             </a>
@@ -1467,7 +1467,7 @@ export default function ConsciousKarmaSections() {
         <div className="absolute bottom-0 left-0 right-0 h-[4px] bg-gradient-to-r from-[#bbb] via-[#444] to-[#222] opacity-50" />
       </section>
 
-     
+
 
       {/* WOVEN */}
       <section className="relative bg-black flex flex-col items-center justify-center py-12 sm:py-14 md:py-16 px-4 sm:px-6 text-center">
@@ -1593,7 +1593,7 @@ export default function ConsciousKarmaSections() {
 
 
       {/* FINAL CTA */}
-  <section className="relative min-h-screen bg-black flex flex-col items-center justify-center py-10 sm:py-12 md:py-[45px] px-4 sm:px-6">
+      <section className="relative min-h-screen bg-black flex flex-col items-center justify-center py-10 sm:py-12 md:py-[45px] px-4 sm:px-6">
         <div className="container mx-auto flex flex-col items-center text-center space-y-6 sm:space-y-7 md:space-y-8 mb-8 sm:mb-12">
           {/* 🔹 Heading */}
           <p className="font-thin text-white text-fluid-18-30 leading-relaxed max-w-[90%] sm:max-w-[620px] mx-auto">
