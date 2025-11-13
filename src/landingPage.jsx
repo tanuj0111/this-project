@@ -1210,12 +1210,12 @@ export default function ConsciousKarmaSections() {
       <section className="relative min-h-screen bg-black flex flex-col pt-12 sm:pt-16 md:pt-4 lg:pt-18">
         <div className="container mx-auto px-4 sm:px-6 flex-1 flex flex-col justify-center">
           {/* 🔹 Header (Brand + Hamburger) */}
-          <div className="absolute top-0 left-0 right-0 flex items-center justify-between py-3 sm:py-4 z-20 px-3 sm:px-6 lg:px-8">
+          <div className=" top-0 left-0 right-0 flex  justify-between py-3 sm:py-4 z-20 px-3 sm:px-6 lg:px-8">
             <a href="/" className="block" aria-label="conscious KARMA home">
               <img
-                src="/ck-logo.svg"
+                src="/Logomy.svg"
                 alt="conscious KARMA"
-                className="h-[40px] sm:h-[52px] md:h-[60px] lg:h-[70px] w-auto select-none"
+                style={{ height: '200px', marginTop: '-80px' }}
                 draggable={false}
               />
             </a>
