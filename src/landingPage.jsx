@@ -1247,14 +1247,14 @@ export default function ConsciousKarmaSections() {
             <div className="flex flex-col justify-center lg:justify-end h-full">
               <div className="flex flex-col items-center sm:items-start justify-center lg:justify-end">
                 <h1 className="font-balgin mb-8 sm:mb-12 md:mb-16 lg:mb-[90px] font-extralight uppercase text-[24px] sm:text-[32px] md:text-[42px] lg:text-[54px] leading-[1.1] sm:leading-[1.02] tracking-[0.02em] text-center sm:text-left w-full transform sm:-translate-x-2 md:-translate-x-6 lg:-translate-x-10 xl:-translate-x-14 2xl:-translate-x-16 sm:-translate-y-1 md:-translate-y-2 lg:-translate-y-3">
-                  <span className="block mb-1 sm:mb-2">YOUR MOBILE NUMBER</span>
-                  <span className="block mb-1 sm:mb-2 text-center sm:text-left">
+                  <span className="block whitespace-nowrap mb-1 sm:mb-2">YOUR MOBILE NUMBER</span>
+                  <span className="block whitespace-nowrap mb-1 sm:mb-2 text-center sm:text-left">
                     IS THE <span className="text-orange-400">KEY</span>
                   </span>
-                  <span className="block mb-1 sm:mb-2 text-center sm:text-left">
+                  <span className="block whitespace-nowrap mb-1 sm:mb-2 text-center sm:text-left">
                     <span className="text-orange-400">TO</span> ACHIEVING YOUR
                   </span>
-                  <span className="block mb-1 sm:mb-2 text-center sm:text-left">
+                  <span className="block whitespace-nowrap mb-1 sm:mb-2 text-center sm:text-left">
                     <span className="text-orange-400">DREAMS</span>
                   </span>
                 </h1>
@@ -1265,10 +1265,10 @@ export default function ConsciousKarmaSections() {
             <div className="flex flex-col items-center justify-start text-center gap-4 sm:gap-6 pt-[2px]">
               {/* Heading */}
               <div className="">
-                <h2 className="font-thin text-gray-200 text-[18px] sm:text-[22px] md:text-[24px] lg:text-[26px] leading-tight">
+                <h2 className="font-thin text-gray-200 text-[18px] sm:text-[22px] md:text-[24px] lg:text-[26px] leading-tight whitespace-nowrap">
                   Mobile Number Influence
                 </h2>
-                <p className="font-thin text-gray-200 text-[18px] sm:text-[22px] md:text-[24px] lg:text-[26px] mt-[-4px] sm:mt-[-6px]">
+                <p className="font-thin text-gray-200 text-[18px] sm:text-[22px] md:text-[24px] lg:text-[26px] mt-[-4px] sm:mt-[-6px] whitespace-nowrap">
                   Key Areas of Life
                 </p>
               </div>
@@ -1408,15 +1408,15 @@ export default function ConsciousKarmaSections() {
         <div className="container mx-auto text-center">
           {/* Top Text (forced line breaks to match mock) */}
           <p className="text-center text-[#eaeaea] font-arsenal text-fluid-16-20 leading-[1.6] mb-6 sm:mb-8 md:mb-10 lg:mb-[40px] max-w-[90%] sm:max-w-[640px] mx-auto">
-            <span className="block">Every mobile number is a unique sequence, each</span>
-            <span className="block">carrying distinct energy</span>
+            <span className="block whitespace-nowrap">Every mobile number is a unique sequence, each</span>
+            <span className="block whitespace-nowrap">carrying distinct energy</span>
           </p>
 
           {/* Middle Text (forced line breaks to match mock) */}
           <p className="text-center text-gray-200 font-arsenal text-fluid-16-20 leading-[1.6] mb-8 sm:mb-10 md:mb-12 lg:mb-[60px] max-w-[90%] sm:max-w-[700px] mx-auto">
-            <span className="block">The interaction and position of its digits form a</span>
-            <span className="block">pattern of vibrations, shaping actions, behaviour, and</span>
-            <span className="block">the flow of life</span>
+            <span className="block whitespace-nowrap">The interaction and position of its digits form a</span>
+            <span className="block whitespace-nowrap">pattern of vibrations, shaping actions, behaviour, and</span>
+            <span className="block whitespace-nowrap">the flow of life</span>
           </p>
 
           {/* Image */}
@@ -1473,11 +1473,11 @@ export default function ConsciousKarmaSections() {
       <section className="relative bg-black flex flex-col items-center justify-center py-12 sm:py-14 md:py-16 px-4 sm:px-6 text-center">
         {/* Text */}
         <p className="max-w-[90%] sm:max-w-[560px] mx-auto text-gray-200 text-fluid-16-20 leading-relaxed font-thin text-center">
-          <span className="block">Just as numbers are woven into the fabric of</span>
-          <span className="block"> the universe, your mobile number is intricately</span>
-          <span className="block">woven into your life. It guides your journey,</span>
-          <span className="block text-orange-400 font-medium">influencing your karma with every call,</span>
-          <span className="block text-orange-400 font-medium">message, and interaction.</span>
+          <span className="block whitespace-nowrap">Just as numbers are woven into the fabric of</span>
+          <span className="block whitespace-nowrap"> the universe, your mobile number is intricately</span>
+          <span className="block whitespace-nowrap">woven into your life. It guides your journey,</span>
+          <span className="block whitespace-nowrap text-orange-400 font-medium">influencing your karma with every call,</span>
+          <span className="block whitespace-nowrap text-orange-400 font-medium">message, and interaction.</span>
         </p>
 
         {/* Image */}
@@ -1495,23 +1495,23 @@ export default function ConsciousKarmaSections() {
         <div className="container mx-auto max-w-[90%] sm:max-w-[680px]">
           {/* Text block */}
           <p className="text-gray-200 text-fluid-18-24 leading-relaxed font-light mb-6 sm:mb-8 md:mb-10 lg:mb-[40px]">
-            <span className="block">
+            <span className="block whitespace-nowrap">
               A mobile number is a <span className="text-[#d87d3d]">DIGITAL AGE YANTRA</span>
             </span>
-            <span className="block">a tool threaded with different forms of energy.</span>
+            <span className="block whitespace-nowrap">a tool threaded with different forms of energy.</span>
           </p>
 
           <p className="text-gray-200 text-fluid-18-24 leading-relaxed font-light mb-6 sm:mb-7 md:mb-8 lg:mb-[32px]">
-            <span className="block">Consciously crafted,</span>
-            <span className="block">it holds the power to ease a journey,</span>
-            <span className="block">shape a path, and</span>
-            <span className="block">open new opportunities.</span>
+            <span className="block whitespace-nowrap">Consciously crafted,</span>
+            <span className="block whitespace-nowrap">it holds the power to ease a journey,</span>
+            <span className="block whitespace-nowrap">shape a path, and</span>
+            <span className="block whitespace-nowrap">open new opportunities.</span>
           </p>
 
           <p className="text-gray-200 text-fluid-18-24 leading-relaxed font-light mb-8 sm:mb-10 md:mb-12 lg:mb-[48px]">
-            <span className="block">Your mobile number is not just utility.</span>
-            <span className="block">it is your greatest asset -</span>
-            <span className="block">the code of your journey.</span>
+            <span className="block whitespace-nowrap">Your mobile number is not just utility.</span>
+            <span className="block whitespace-nowrap">it is your greatest asset -</span>
+            <span className="block whitespace-nowrap">the code of your journey.</span>
           </p>
 
           {/* CTA */}
@@ -1597,8 +1597,8 @@ export default function ConsciousKarmaSections() {
         <div className="container mx-auto flex flex-col items-center text-center space-y-6 sm:space-y-7 md:space-y-8 mb-8 sm:mb-12">
           {/* 🔹 Heading */}
           <p className="font-thin text-white text-fluid-18-30 leading-relaxed max-w-[90%] sm:max-w-[620px] mx-auto">
-            <span className="block">Is Your Mobile Number Enhancing Your</span>
-            <span className="block">Journey or Holding You Back?</span>
+            <span className="block whitespace-nowrap">Is Your Mobile Number Enhancing Your</span>
+            <span className="block whitespace-nowrap">Journey or Holding You Back?</span>
           </p>
 
           {/* 🔹 Icon Row */}
